@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap');
+/* Add Noto fonts for Indian languages */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --base-font-size: 18px; /* larger default for readability */
+  --ink: #1C2B2E;
+  --paper: #F7F5F0;
+  --seal: #8C3B2E;
+  --ledger-line: #C9C2B4;
+  --trust-green: #2F5D50;
+  --alert-amber: #B8863A;
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* language-specific font families */
+html.lang-hi {
+  font-family: 'Noto Sans Devanagari', 'IBM Plex Sans', sans-serif;
+}
+
+html.lang-ta {
+  font-family: 'Noto Sans Tamil', 'IBM Plex Sans', sans-serif;
+}
+
+html.lang-en {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  font-size: var(--base-font-size);
+}
+
+/* Dark theme variables */
+.dark {
+  --ink: #E6EEF0;
+  --paper: #0F1720;
+  --seal: #D9B8AC;
+  --ledger-line: #22333B;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Source Serif 4', serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border-radius: 0;
+}
+
+::selection {
+  background: rgba(140, 59, 46, 0.16);
+}
