@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Karar - Multilingual Agreement Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f7f5f0;
+      --card-bg: #ffffff;
+      --text-main: #2b2927;
+      --text-muted: #6e6a64;
+      --primary: #943d2c;
+      --primary-hover: #7a3123;
+      --border-color: #e5e1d8;
+      --badge-bg: #f0ebe0;
+      --success: #2e6648;
+      --warning: #cc7d24;
+      --error: #a82e2e;
+      --shadow-sm: 0 2px 8px rgba(43, 41, 39, 0.05);
+      --shadow-md: 0 8px 24px rgba(43, 41, 39, 0.08);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Outfit', sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.5rem;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    .logo-text {
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+    }
+
+    .app-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .app-subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .dashboard-grid {
+        grid-template-columns: 1.1fr 1.3fr;
+      }
+    }
+
+    .panel {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Input mode switcher tabs */
+    .tab-header {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1.5rem;
+      gap: 0.5rem;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      background-color: #faf9f6;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: var(--text-main);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    textarea:focus {
+      border-color: var(--primary);
+    }
+
+    /* Voice Recorder UI */
+    .recorder-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: #faf9f6;
+      border: 1px dashed var(--border-color);
+      border-radius: 8px;
+      min-height: 200px;
+      text-align: center;
+      gap: 1.25rem;
+    }
+
+    .record-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(148, 61, 44, 0.25);
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .record-btn::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      opacity: 0;
+      transform: scale(1);
+    }
+
+    .record-btn.recording {
+      background-color: var(--error);
+      box-shadow: 0 4px 16px rgba(168, 46, 46, 0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .record-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: #ffffff;
+      transition: transform 0.2s;
+    }
+
+    .record-btn:active {
+      transform: scale(0.95);
+    }
+
+    .record-status-text {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .timer-display {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* File Uploader UI */
+    .upload-zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: #faf9f6;
+      border: 1px dashed var(--border-color);
+      border-radius: 8px;
+      min-height: 200px;
+      text-align: center;
+      cursor: pointer;
+      gap: 0.75rem;
+      transition: all 0.2s;
+    }
+
+    .upload-zone:hover, .upload-zone.dragover {
+      border-color: var(--primary);
+      background-color: #fbf5f2;
+    }
+
+    .upload-icon {
+      font-size: 2.5rem;
+      color: var(--text-muted);
+    }
+
+    .file-details {
+      background-color: #f0ebe0;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .remove-file-btn {
+      background: none;
+      border: none;
+      color: var(--error);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .control-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    select {
+      width: 100%;
+      background-color: #faf9f6;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      outline: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232b2927' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1em;
+      transition: border-color 0.2s;
+    }
+
+    select:focus {
+      border-color: var(--primary);
+    }
+
+    .rust-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--primary);
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(148, 61, 44, 0.2);
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .rust-btn:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .rust-btn:active {
+      transform: scale(0.98);
+    }
+
+    .rust-btn:disabled {
+      background-color: var(--text-muted);
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    /* Right Panel Realtime Visualizer */
+    .right-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .right-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* Step Tracker */
+    .pipeline-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background-color: #faf9f6;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .step-item.active {
+      background-color: #fbf5f2;
+      border-color: var(--primary);
+    }
+
+    .step-item.completed {
+      background-color: #f2f7f4;
+      border-color: var(--success);
+    }
+
+    .step-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .step-item.active .step-circle {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .step-item.completed .step-circle {
+      border-color: var(--success);
+      background-color: var(--success);
+      color: #ffffff;
+    }
+
+    .step-text {
+      font-weight: 600;
+      font-size: 0.95rem;
+      flex-grow: 1;
+    }
+
+    .step-status {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2.5px solid rgba(148, 61, 44, 0.2);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 1s infinite linear;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .output-card {
+      display: none;
+      flex-direction: column;
+      gap: 1.5rem;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .metadata-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .meta-box {
+      background-color: #faf9f6;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .meta-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .meta-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .badge-success {
+      background-color: #e6f4ea;
+      color: var(--success);
+      border: 1px solid #ceecd6;
+    }
+
+    .badge-warning {
+      background-color: #fef7e0;
+      color: var(--warning);
+      border: 1px solid #fbeab8;
+    }
+
+    .badge-danger {
+      background-color: #fce8e6;
+      color: var(--error);
+      border: 1px solid #fad2cf;
+    }
+
+    .json-details {
+      background-color: #2b2927;
+      color: #faf9f6;
+      border-radius: 8px;
+      padding: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow-x: auto;
+      max-height: 250px;
+    }
+
+    .agreement-container {
+      background-color: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      min-height: 300px;
+      max-height: 500px;
+      overflow-y: auto;
+      box-shadow: inset 0 2px 4px rgba(43, 41, 39, 0.02);
+      font-family: var(--font-sans);
+    }
+
+    .agreement-container h1 {
+      font-family: var(--font-display);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      border-bottom: 2px double var(--border-color);
+      padding-bottom: 0.75rem;
+    }
+
+    .agreement-container h2 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .agreement-container h3 {
+      font-size: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .agreement-container p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    .agreement-container ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .agreement-container li {
+      margin-bottom: 0.25rem;
+    }
+
+    .action-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .outline-btn {
+      flex: 1;
+      background-color: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .outline-btn:hover {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .warning-card {
+      display: none;
+      background-color: #fef7e0;
+      border: 1px solid #fbeab8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .warning-card h4 {
+      color: var(--warning);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .warning-card p {
+      font-size: 0.9rem;
+      color: #665220;
+      margin-bottom: 1rem;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #665220;
+    }
+
+    .radio-label input {
+      accent-color: var(--primary);
+    }
+
+    /* Lock banner styling */
+    .lock-banner-active {
+      background-color: #faf5f2;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .lock-banner-expired {
+      background-color: #fce8e6;
+      border: 1px solid var(--error);
+      color: var(--error);
+      margin-bottom: 1rem;
+    }
+    
+    /* Highlighting missing fields */
+    .input-missing {
+      background-color: #fffcf0 !important;
+      border: 1px solid var(--warning) !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <span class="logo-icon">⚖</span>
+        <span class="logo-text">Voice Karar</span>
+      </div>
+      <div>
+        <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary); text-transform: uppercase; border: 1px solid var(--primary); padding: 0.25rem 0.75rem; border-radius: 4px;">Agent Live</span>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <!-- Left Panel: Input & Control Panel -->
+      <section class="panel">
+        <div style="margin-bottom: 1.5rem;">
+          <h2 class="app-title">Draft New Agreement</h2>
+          <p class="app-subtitle">Record, upload, or paste contract terms in any format.</p>
+        </div>
+
+        <!-- Input Mode Tabs -->
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="switchInputMode('upload')">📁 Upload Audio</button>
+          <button class="tab-btn" onclick="switchInputMode('voice')">🎙 Voice Recorder</button>
+          <button class="tab-btn" onclick="switchInputMode('text')">📝 Text Input</button>
+        </div>
+
+        <!-- Tab 3: Upload Audio File Interface -->
+        <div id="mode-upload" class="tab-content active">
+          <div class="upload-zone" id="upload-zone" onclick="document.getElementById('audio-file-input').click()">
+            <div class="upload-icon">📁</div>
+            <p style="font-weight: 600;">Drag & drop your audio file here or click to browse</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Supports MP3, WAV, WEBM, M4A (Max 10MB)</p>
+            <input type="file" id="audio-file-input" style="display: none;" accept="audio/*">
+            <div id="uploaded-file-details" class="file-details" style="display: none;">
+              <span id="file-name-span">file.mp3</span>
+              <button class="remove-file-btn" onclick="clearUploadedFile(event)">×</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Voice Recording Interface -->
+        <div id="mode-voice" class="tab-content">
+          <div class="recorder-container">
+            <div class="timer-display" id="record-timer">00:00</div>
+            <button class="record-btn" id="record-btn">
+              <!-- Mic Icon -->
+              <svg id="record-icon" viewBox="0 0 24 24">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+              </svg>
+            </button>
+            <div class="record-status-text" id="record-status">Click to start recording</div>
+            <audio id="voice-preview" style="display: none; width: 100%; max-width: 320px; margin-top: 0.5rem;" controls></audio>
+          </div>
+        </div>
+
+        <!-- Tab 1: Text Transcript Input -->
+        <div id="mode-text" class="tab-content">
+          <div class="form-group">
+            <label for="transcript">Voice Transcript / Details</label>
+            <textarea id="transcript" placeholder="e.g., Sanjay Patil agreed to rent his car (MH 12 AB 1234) to Milind Joshi for 6 months. Monthly rent is 10,000 INR starting on July 17, 2026. Sanjay pays insurance, Milind pays maintenance..."></textarea>
+          </div>
+        </div>
+
+        <!-- Warning panel for low confidence / manual selection -->
+        <div id="warning-panel" class="warning-card">
+          <h4>⚠ Low Language Confidence</h4>
+          <p>The agent could not confidently detect the source language. Please manually specify the transcript language:</p>
+          <div class="radio-group" style="display: flex; flex-wrap: wrap; gap: 0.75rem 1rem;">
+            <label class="radio-label"><input type="radio" name="manual_lang" value="English"> English</label>
+            <label class="radio-label"><input type="radio" name="manual_lang" value="Hindi"> Hindi</label>
+            <label class="radio-label"><input type="radio" name="manual_lang" value="Marathi"> Marathi</label>
+            <label class="radio-label"><input type="radio" name="manual_lang" value="Bengali"> Bengali</label>
+            <label class="radio-label"><input type="radio" name="manual_lang" value="Tamil"> Tamil</label>
+            <label class="radio-label"><input type="radio" name="manual_lang" value="Telugu"> Telugu</label>
+            <label class="radio-label"><input type="radio" name="manual_lang" value="Gujarati"> Gujarati</label>
+            <label class="radio-label"><input type="radio" name="manual_lang" value="Kannada"> Kannada</label>
+          </div>
+        </div>
+
+        <div class="control-row">
+          <div class="form-group">
+            <label for="output_lang">Agreement Language</label>
+            <select id="output_lang">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi (हिन्दी)</option>
+              <option value="Marathi">Marathi (मराठी)</option>
+              <option value="Bengali">Bengali (বাংলা)</option>
+              <option value="Tamil">Tamil (தமிழ்)</option>
+              <option value="Telugu">Telugu (తెలుగు)</option>
+              <option value="Gujarati">Gujarati (ગુજરાતી)</option>
+              <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="source_lang">Source Language</label>
+            <select id="source_lang">
+              <option value="">Auto-Detect Language</option>
+              <option value="English">English</option>
+              <option value="Hindi">Hindi (हिन्दी)</option>
+              <option value="Marathi">Marathi (मराठी)</option>
+              <option value="Bengali">Bengali (বাংলা)</option>
+              <option value="Tamil">Tamil (தமிழ்)</option>
+              <option value="Telugu">Telugu (తెలుగు)</option>
+              <option value="Gujarati">Gujarati (ગુજરાતી)</option>
+              <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="generate-btn" class="rust-btn">
+          <span>+ Generate Agreement</span>
+        </button>
+      </section>
+
+      <!-- Right Panel: Realtime Status & Output -->
+      <section class="panel" style="display: flex; flex-direction: column;">
+        <div class="right-header">
+          <h3 class="right-title">AI Pipeline & Output</h3>
+          <span id="pipeline-overall-status" style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Idle</span>
+        </div>
+
+        <!-- Real-time Step tracker -->
+        <div class="pipeline-steps">
+          <!-- Transcribe step is visible dynamically when audio is processed -->
+          <div id="step-transcribe" class="step-item" style="display: none;">
+            <div class="step-circle">0</div>
+            <div class="step-text">Audio Transcription (Multimodal)</div>
+            <div class="step-status" id="transcribe-status">Idle</div>
+          </div>
+          <div id="step-detect" class="step-item">
+            <div class="step-circle">1</div>
+            <div class="step-text">Language Detection</div>
+            <div class="step-status" id="detect-status">Idle</div>
+          </div>
+          <div id="step-extract" class="step-item">
+            <div class="step-circle">2</div>
+            <div class="step-text">Structured Data Extraction</div>
+            <div class="step-status" id="extract-status">Idle</div>
+          </div>
+          <div id="step-validate" class="step-item">
+            <div class="step-circle">3</div>
+            <div class="step-text">Anti-Hallucination & Validation</div>
+            <div class="step-status" id="validate-status">Idle</div>
+          </div>
+          <div id="step-draft" class="step-item">
+            <div class="step-circle">4</div>
+            <div class="step-text">Legal Drafting</div>
+            <div class="step-status" id="draft-status">Idle</div>
+          </div>
+        </div>
+
+        <!-- Result View Card -->
+        <div id="output-view" class="output-card">
+          <!-- Text preview of the generated transcript when audio is uploaded -->
+          <div id="transcribed-text-view" style="display: none; background-color: #faf9f6; border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem;">
+            <div class="meta-label">Transcribed Audio Text</div>
+            <p id="transcribed-text-p" style="font-size: 0.95rem; font-style: italic; color: var(--text-main);"></p>
+          </div>
+
+          <div class="metadata-grid">
+            <div class="meta-box">
+              <div class="meta-label">Detected Language</div>
+              <div class="meta-value" id="res-detected-lang">-</div>
+            </div>
+            <div class="meta-box">
+              <div class="meta-label">Validation Status</div>
+              <div id="res-validation-badge" class="badge badge-success">Valid</div>
+            </div>
+          </div>
+
+          <!-- Lock status banner -->
+          <div id="lock-banner" style="display: none; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 700; text-align: center; font-size: 0.9rem;">
+            <span id="lock-banner-text">⏱ Editing Window Open: 23h 59m remaining</span>
+          </div>
+
+          <!-- Edit Fields Form -->
+          <div id="edit-fields-container" style="background-color: #faf9f6; border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+            <div class="meta-label" style="margin-bottom: 1rem; color: var(--primary); font-size: 0.85rem;">Complete / Modify Parameters (Highlighting Omissions)</div>
+            <form id="edit-agreement-form" onsubmit="event.preventDefault();">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Party 1 (Owner/Lessor)</label>
+                  <input type="text" id="edit-party1" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Party 2 (Tenant/Lessee)</label>
+                  <input type="text" id="edit-party2" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Agreement Purpose</label>
+                  <input type="text" id="edit-purpose" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Location/Property Address</label>
+                  <input type="text" id="edit-location" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Payment Amount</label>
+                  <input type="text" id="edit-amount" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Payment Terms/Due Dates</label>
+                  <input type="text" id="edit-terms" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Agreement Duration</label>
+                  <input type="text" id="edit-duration" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Witnesses (comma separated)</label>
+                  <input type="text" id="edit-witnesses" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label style="font-size: 0.75rem; font-weight: 600;">Important Dates (comma separated)</label>
+                <input type="text" id="edit-dates" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Party 1 Covenants (comma separated)</label>
+                  <textarea id="edit-p1-covenants" style="width:100%; height: 80px; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.9rem; resize: vertical; outline: none;"></textarea>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.75rem; font-weight: 600;">Party 2 Covenants (comma separated)</label>
+                  <textarea id="edit-p2-covenants" style="width:100%; height: 80px; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.9rem; resize: vertical; outline: none;"></textarea>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label style="font-size: 0.75rem; font-weight: 600;">Special Conditions (comma separated)</label>
+                <input type="text" id="edit-conditions" style="width:100%; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-sans); font-size: 0.95rem; outline: none;">
+              </div>
+
+              <button id="update-btn" class="rust-btn" style="padding: 0.75rem; font-size: 0.9rem; margin-top: 0.5rem;">
+                <span>Update Agreement Draft</span>
+              </button>
+            </form>
+          </div>
+
+          <div id="missing-fields-box" style="display: none;">
+            <div class="meta-label" style="color: var(--warning);">Missing Fields Identified (Hallucination Safe)</div>
+            <div id="missing-badges-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem;">
+              <!-- Badges inserted dynamically -->
+            </div>
+          </div>
+
+          <div>
+            <div class="meta-label">Extracted JSON Scheme</div>
+            <pre id="json-preview" class="json-details">{}</pre>
+          </div>
+
+          <div>
+            <div class="meta-label">Generated Legal Document</div>
+            <div id="agreement-preview" class="agreement-container">
+              <!-- Rendered markdown agreement will go here -->
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button id="copy-btn" class="outline-btn">📋 Copy Agreement</button>
+            <button id="download-btn" class="outline-btn">💾 Download Agreement</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Core references
+    const transcriptInput = document.getElementById("transcript");
+    const outputLangSelect = document.getElementById("output_lang");
+    const sourceLangSelect = document.getElementById("source_lang");
+    const generateBtn = document.getElementById("generate-btn");
+    const warningPanel = document.getElementById("warning-panel");
+    const outputView = document.getElementById("output-view");
+    const overallStatus = document.getElementById("pipeline-overall-status");
+
+    // Audio Elements References
+    const recordBtn = document.getElementById("record-btn");
+    const recordStatus = document.getElementById("record-status");
+    const recordTimer = document.getElementById("record-timer");
+    const voicePreview = document.getElementById("voice-preview");
+    const uploadZone = document.getElementById("upload-zone");
+    const audioFileInput = document.getElementById("audio-file-input");
+    const fileDetailsBox = document.getElementById("uploaded-file-details");
+    const fileNameSpan = document.getElementById("file-name-span");
+
+    // Steps references
+    const stepTranscribe = document.getElementById("step-transcribe");
+    const stepDetect = document.getElementById("step-detect");
+    const stepExtract = document.getElementById("step-extract");
+    const stepValidate = document.getElementById("step-validate");
+    const stepDraft = document.getElementById("step-draft");
+
+    const transcribeStatus = document.getElementById("transcribe-status");
+    const detectStatus = document.getElementById("detect-status");
+    const extractStatus = document.getElementById("extract-status");
+    const validateStatus = document.getElementById("validate-status");
+    const draftStatus = document.getElementById("draft-status");
+
+    // Output fields references
+    const resDetectedLang = document.getElementById("res-detected-lang");
+    const resValidationBadge = document.getElementById("res-validation-badge");
+    const missingFieldsBox = document.getElementById("missing-fields-box");
+    const missingBadgesContainer = document.getElementById("missing-badges-container");
+    const jsonPreview = document.getElementById("json-preview");
+    const agreementPreview = document.getElementById("agreement-preview");
+    const transcribedTextView = document.getElementById("transcribed-text-view");
+    const transcribedTextP = document.getElementById("transcribed-text-p");
+    const copyBtn = document.getElementById("copy-btn");
+    const downloadBtn = document.getElementById("download-btn");
+
+    let currentInputMode = "upload"; // text, voice, upload
+    let currentAgreementText = "";
+
+    // Voice Recorder State
+    let mediaRecorder = null;
+    let audioChunks = [];
+    let isRecording = false;
+    let timerInterval = null;
+    let recordingTime = 0;
+    let voiceBlob = null;
+    let uploadedFileBase64 = null;
+    let uploadedFileMime = null;
+
+    // Switch Input Modes
+    function switchInputMode(mode) {
+      currentInputMode = mode;
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+      if (mode === "upload") {
+        document.querySelector(".tab-btn:nth-child(1)").classList.add("active");
+        document.getElementById("mode-upload").classList.add("active");
+      } else if (mode === "voice") {
+        document.querySelector(".tab-btn:nth-child(2)").classList.add("active");
+        document.getElementById("mode-voice").classList.add("active");
+        initRecorder();
+      } else if (mode === "text") {
+        document.querySelector(".tab-btn:nth-child(3)").classList.add("active");
+        document.getElementById("mode-text").classList.add("active");
+      }
+    }
+
+    // Pre-populate with a cool demo transcript on click to make testing easier
+    transcriptInput.addEventListener("click", function() {
+      if (transcriptInput.value.trim() === "") {
+        transcriptInput.value = `हा करार १७ जुलै २०२६ रोजी संजय पाटील (मालक) आणि मिलिंद जोशी (भाडेकरू) यांच्यात झाला आहे। संजय पाटील त्यांची कार (क्रमांक MH 12 AB 1234) मिलिंद जोशी यांना ६ महिन्यांसाठी भाड्याने देत आहेत। भाडे दरमहा १०,००० रुपये असेल, जे प्रत्येक महिन्याच्या पहिल्या तारखेला द्यावे लागेल। कारची देखभाल मिलिंद जोशी करतील। संजय पाटील विमा हप्ता भरतील। हा करार पुणे येथे करण्यात आला असून रमेश काळे हा साक्षीदार आहे।`;
+      }
+    });
+
+    // Recording Functions
+    async function initRecorder() {
+      if (mediaRecorder) return;
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+        
+        mediaRecorder.ondataavailable = event => {
+          audioChunks.push(event.data);
+        };
+
+        mediaRecorder.onstop = () => {
+          voiceBlob = new Blob(audioChunks, { type: mediaRecorder.mimeType || "audio/webm" });
+          const audioUrl = URL.createObjectURL(voiceBlob);
+          voicePreview.src = audioUrl;
+          voicePreview.style.display = "block";
+          recordStatus.textContent = "Recording Complete. Ready to use.";
+        };
+      } catch (err) {
+        console.error("Microphone access denied:", err);
+        recordStatus.textContent = "Microphone access denied or not supported.";
+        recordStatus.style.color = "var(--error)";
+      }
+    }
+
+    recordBtn.addEventListener("click", () => {
+      if (!mediaRecorder) {
+        alert("Microphone is not initialized. Please allow microphone access.");
+        return;
+      }
+
+      if (!isRecording) {
+        // Start recording
+        audioChunks = [];
+        mediaRecorder.start();
+        isRecording = true;
+        recordBtn.classList.add("recording");
+        recordStatus.textContent = "Recording... Click to stop";
+        voicePreview.style.display = "none";
+        
+        // Start Timer
+        recordingTime = 0;
+        recordTimer.textContent = "00:00";
+        timerInterval = setInterval(() => {
+          recordingTime++;
+          const mins = String(Math.floor(recordingTime / 60)).padStart(2, '0');
+          const secs = String(recordingTime % 60).padStart(2, '0');
+          recordTimer.textContent = `${mins}:${secs}`;
+        }, 1000);
+      } else {
+        // Stop recording
+        mediaRecorder.stop();
+        isRecording = false;
+        recordBtn.classList.remove("recording");
+        clearInterval(timerInterval);
+      }
+    });
+
+    // File Upload Drag & Drop
+    uploadZone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      uploadZone.classList.add("dragover");
+    });
+
+    uploadZone.addEventListener("dragleave", () => {
+      uploadZone.classList.remove("dragover");
+    });
+
+    uploadZone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      uploadZone.classList.remove("dragover");
+      if (e.dataTransfer.files.length > 0) {
+        handleFileSelect(e.dataTransfer.files[0]);
+      }
+    });
+
+    audioFileInput.addEventListener("change", (e) => {
+      if (e.target.files.length > 0) {
+        handleFileSelect(e.target.files[0]);
+      }
+    });
+
+    function handleFileSelect(file) {
+      const allowedExtensions = ["mp3", "wav", "webm", "m4a", "ogg", "aac", "flac"];
+      const extension = file.name.split('.').pop().toLowerCase();
+      
+      if (!file.type.startsWith("audio/") && !allowedExtensions.includes(extension)) {
+        alert("Please upload a valid audio file!");
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        alert("File is too large! Maximum limit is 10MB.");
+        return;
+      }
+
+      fileNameSpan.textContent = `${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+      fileDetailsBox.style.display = "flex";
+      
+      let mimeType = file.type;
+      if (!mimeType) {
+        const mimeMap = {
+          "mp3": "audio/mp3",
+          "wav": "audio/wav",
+          "webm": "audio/webm",
+          "m4a": "audio/x-m4a",
+          "ogg": "audio/ogg",
+          "aac": "audio/aac",
+          "flac": "audio/flac"
+        };
+        mimeType = mimeMap[extension] || "audio/mpeg";
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        uploadedFileBase64 = event.target.result.split(",")[1];
+        uploadedFileMime = mimeType;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearUploadedFile(event) {
+      event.stopPropagation();
+      audioFileInput.value = "";
+      fileDetailsBox.style.display = "none";
+      uploadedFileBase64 = null;
+      uploadedFileMime = null;
+    }
+
+    // Format Markdown-like headings into HTML for basic view
+    function formatMarkdown(text) {
+      if (!text) return "";
+      let html = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+      // Replace headers
+      html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+      html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+      html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+
+      // Bold text
+      html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+      // Unordered lists
+      html = html.replace(/^\* (.*$)/gim, '<ul><li>$1</li></ul>');
+      html = html.replace(/<\/ul>\s*<ul>/g, ''); // Combine separate list blocks
+
+      // Horizontal lines
+      html = html.replace(/^---/gim, '<hr style="border:0; border-top: 1px solid var(--border-color); margin: 1rem 0;">');
+
+      // Line breaks
+      html = html.replace(/\n/g, '<br>');
+
+      return html;
+    }
+
+    // Step Status Helper
+    function setStepStatus(stepEl, statusEl, state, message = "") {
+      stepEl.className = "step-item";
+      statusEl.innerHTML = "";
+
+      if (state === "idle") {
+        statusEl.textContent = "Idle";
+      } else if (state === "running") {
+        stepEl.classList.add("active");
+        statusEl.innerHTML = '<div class="spinner"></div>';
+      } else if (state === "completed") {
+        stepEl.classList.add("completed");
+        statusEl.textContent = message || "✓ Done";
+      } else if (state === "failed") {
+        statusEl.textContent = message || "✘ Failed";
+        statusEl.style.color = "var(--error)";
+      }
+    }
+
+    // Reset Visualizer
+    function resetPipeline(useAudio) {
+      if (useAudio) {
+        stepTranscribe.style.display = "flex";
+        setStepStatus(stepTranscribe, transcribeStatus, "idle");
+      } else {
+        stepTranscribe.style.display = "none";
+      }
+
+      setStepStatus(stepDetect, detectStatus, "idle");
+      setStepStatus(stepExtract, extractStatus, "idle");
+      setStepStatus(stepValidate, validateStatus, "idle");
+      setStepStatus(stepDraft, draftStatus, "idle");
+      outputView.style.display = "none";
+      warningPanel.style.display = "none";
+      transcribedTextView.style.display = "none";
+      overallStatus.textContent = "Processing...";
+      overallStatus.style.color = "var(--primary)";
+    }
+
+    // Helper to convert blob to base64
+    function blobToBase64(blob) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result.split(",")[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    // Core Call Function
+    async function generateAgreement() {
+      const outputLanguage = outputLangSelect.value;
+      let detectedLanguage = sourceLangSelect.value;
+
+      // Prepare request parameters based on mode
+      const requestBody = {
+        output_language: outputLanguage
+      };
+
+      let useAudio = false;
+
+      if (currentInputMode === "text") {
+        const transcript = transcriptInput.value.trim();
+        if (!transcript) {
+          alert("Please enter a transcript details first!");
+          return;
+        }
+        requestBody.transcript = transcript;
+      } else if (currentInputMode === "voice") {
+        if (!voiceBlob) {
+          alert("Please record some audio first!");
+          return;
+        }
+        useAudio = true;
+        requestBody.audio = await blobToBase64(voiceBlob);
+        requestBody.audio_mime_type = voiceBlob.type;
+      } else if (currentInputMode === "upload") {
+        if (!uploadedFileBase64) {
+          alert("Please drag or select an audio file first!");
+          return;
+        }
+        useAudio = true;
+        requestBody.audio = uploadedFileBase64;
+        requestBody.audio_mime_type = uploadedFileMime;
+      }
+
+      // Handle warning manual override
+      if (warningPanel.style.display === "block") {
+        const checkedRadio = document.querySelector('input[name="manual_lang"]:checked');
+        if (checkedRadio) {
+          detectedLanguage = checkedRadio.value;
+        }
+      }
+
+      if (detectedLanguage) {
+        requestBody.detected_language = detectedLanguage;
+      }
+
+      resetPipeline(useAudio);
+      generateBtn.disabled = true;
+
+      try {
+        // Step 0: Transcription (if applicable)
+        if (useAudio) {
+          setStepStatus(stepTranscribe, transcribeStatus, "running");
+          // Add a visual delay for feedback
+          await new Promise(r => setTimeout(r, 1200));
+        }
+
+        // Step 1: Language Detection
+        setStepStatus(stepDetect, detectStatus, "running");
+        await new Promise(r => setTimeout(r, 1000));
+
+        const response = await fetch("/generate-agreement", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(requestBody)
+        });
+
+        const result = await response.json();
+
+        // Handle low confidence failure
+        if (response.status === 400 && result.error === "low_confidence") {
+          if (useAudio) setStepStatus(stepTranscribe, transcribeStatus, "completed");
+          setStepStatus(stepDetect, detectStatus, "failed", "Ambiguous");
+          overallStatus.textContent = "Manual Choice Needed";
+          overallStatus.style.color = "var(--warning)";
+          warningPanel.style.display = "block";
+          generateBtn.disabled = false;
+          return;
+        }
+
+        if (!response.ok) {
+          throw new Error(result.message || "Endpoint error occurred.");
+        }
+
+        // Complete Step 0 and Step 1
+        if (useAudio) {
+          setStepStatus(stepTranscribe, transcribeStatus, "completed");
+          // Show the transcribed text
+          transcribedTextP.textContent = `"${result.transcript}"`;
+          transcribedTextView.style.display = "block";
+          // Sync it back to textarea for references
+          transcriptInput.value = result.transcript;
+        }
+        
+        setStepStatus(stepDetect, detectStatus, "completed", result.detected_language);
+        resDetectedLang.textContent = result.detected_language;
+
+        // Step 2: Extraction
+        setStepStatus(stepExtract, extractStatus, "running");
+        await new Promise(r => setTimeout(r, 1200));
+        setStepStatus(stepExtract, extractStatus, "completed");
+
+        // Step 3: Validate
+        setStepStatus(stepValidate, validateStatus, "running");
+        await new Promise(r => setTimeout(r, 1000));
+        
+        const missingFields = result.missing_fields || [];
+        if (missingFields.length > 0) {
+          setStepStatus(stepValidate, validateStatus, "completed", `Incomplete`);
+          resValidationBadge.textContent = "Omissions Flagged";
+          resValidationBadge.className = "badge badge-warning";
+          
+          missingBadgesContainer.innerHTML = "";
+          missingFields.forEach(field => {
+            const badge = document.createElement("span");
+            badge.className = "badge badge-danger";
+            badge.textContent = field;
+            missingBadgesContainer.appendChild(badge);
+          });
+          missingFieldsBox.style.display = "block";
+        } else {
+          setStepStatus(stepValidate, validateStatus, "completed", "Fully Valid");
+          resValidationBadge.textContent = "Valid & Complete";
+          resValidationBadge.className = "badge badge-success";
+          missingFieldsBox.style.display = "none";
+        }
+
+        // Step 4: Legal Drafting
+        setStepStatus(stepDraft, draftStatus, "running");
+        await new Promise(r => setTimeout(r, 1200));
+        setStepStatus(stepDraft, draftStatus, "completed");
+
+        // Render JSON preview
+        jsonPreview.textContent = JSON.stringify(result.structured_data, null, 2);
+
+        // Render Agreement
+        currentAgreementText = result.agreement;
+        agreementPreview.innerHTML = formatMarkdown(result.agreement);
+
+        // Store ID and start countdown timer
+        currentAgreementId = result.id;
+        populateEditForm(result.structured_data);
+        startLockCountdown(result.created_at);
+
+        // Show Output
+        outputView.style.display = "flex";
+        overallStatus.textContent = "Success";
+        overallStatus.style.color = "var(--success)";
+
+      } catch (error) {
+        console.error(error);
+        overallStatus.textContent = "Error";
+        overallStatus.style.color = "var(--error)";
+        if (useAudio) setStepStatus(stepTranscribe, transcribeStatus, "failed", "Error");
+        setStepStatus(stepDetect, detectStatus, "failed", "Error");
+      } finally {
+        generateBtn.disabled = false;
+      }
+    }
+
+    generateBtn.addEventListener("click", generateAgreement);
+
+    // Form elements and tracking variables
+    const lockBanner = document.getElementById("lock-banner");
+    const lockBannerText = document.getElementById("lock-banner-text");
+    const updateBtn = document.getElementById("update-btn");
+    
+    const editParty1 = document.getElementById("edit-party1");
+    const editParty2 = document.getElementById("edit-party2");
+    const editPurpose = document.getElementById("edit-purpose");
+    const editLocation = document.getElementById("edit-location");
+    const editAmount = document.getElementById("edit-amount");
+    const editTerms = document.getElementById("edit-terms");
+    const editDuration = document.getElementById("edit-duration");
+    const editWitnesses = document.getElementById("edit-witnesses");
+    const editDates = document.getElementById("edit-dates");
+    const editP1Covenants = document.getElementById("edit-p1-covenants");
+    const editP2Covenants = document.getElementById("edit-p2-covenants");
+    const editConditions = document.getElementById("edit-conditions");
+
+    let currentAgreementId = null;
+    let currentCreatedAt = null;
+    let countdownTimer = null;
+
+    // Populates fields and highlights missing omissions
+    function populateEditForm(data) {
+      const checkVal = (val) => {
+        if (Array.isArray(val)) {
+          return val.join(", ");
+        }
+        return val || "";
+      };
+
+      const isMissing = (val) => {
+        if (Array.isArray(val)) {
+          return val.length === 0 || val.some(item => !item || item.trim().toLowerCase() === "not specified");
+        }
+        const s = String(val).trim().toLowerCase();
+        return !val || s === "" || s === "not specified";
+      };
+
+      const setupField = (inputEl, val) => {
+        const displayVal = checkVal(val);
+        inputEl.value = displayVal;
+        if (isMissing(displayVal)) {
+          inputEl.classList.add("input-missing");
+        } else {
+          inputEl.classList.remove("input-missing");
+        }
+      };
+
+      setupField(editParty1, data.party_1);
+      setupField(editParty2, data.party_2);
+      setupField(editPurpose, data.agreement_purpose);
+      setupField(editLocation, data.location);
+      setupField(editAmount, data.payment_amount);
+      setupField(editTerms, data.payment_terms);
+      setupField(editDuration, data.agreement_duration);
+      setupField(editWitnesses, data.witnesses);
+      setupField(editDates, data.important_dates);
+      setupField(editP1Covenants, data.responsibilities?.party_1);
+      setupField(editP2Covenants, data.responsibilities?.party_2);
+      setupField(editConditions, data.special_conditions);
+    }
+
+    // Handles the countdown locking mechanism
+    function startLockCountdown(createdAtString) {
+      if (countdownTimer) clearInterval(countdownTimer);
+      
+      currentCreatedAt = new Date(createdAtString);
+      lockBanner.style.display = "block";
+
+      function updateTimer() {
+        const elapsed = Date.now() - currentCreatedAt.getTime();
+        const remaining = 24 * 60 * 60 * 1000 - elapsed;
+
+        if (remaining <= 0) {
+          clearInterval(countdownTimer);
+          lockBanner.className = "lock-banner-expired";
+          lockBannerText.textContent = "🔒 Agreement Locked: The 24-hour edit period has expired. No further changes can be made.";
+          // Disable all inputs
+          document.querySelectorAll("#edit-agreement-form input, #edit-agreement-form textarea").forEach(el => el.disabled = true);
+          updateBtn.disabled = true;
+          updateBtn.querySelector("span").textContent = "Agreement Locked";
+        } else {
+          lockBanner.className = "lock-banner-active";
+          const hours = Math.floor(remaining / (1000 * 60 * 60));
+          const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+          lockBannerText.textContent = `⏱ Editing Window Open: ${hours}h ${minutes}m ${seconds}s remaining to complete/edit terms.`;
+          // Enable all inputs
+          document.querySelectorAll("#edit-agreement-form input, #edit-agreement-form textarea").forEach(el => el.disabled = false);
+          updateBtn.disabled = false;
+          updateBtn.querySelector("span").textContent = "Update Agreement Draft";
+        }
+      }
+
+      updateTimer();
+      countdownTimer = setInterval(updateTimer, 1000);
+    }
+
+    // Updates draft dynamically
+    async function updateAgreementDraft() {
+      if (!currentAgreementId) return;
+
+      const parseCSV = (val) => {
+        if (!val || val.trim() === "") return ["Not Specified"];
+        return val.split(",").map(s => s.trim()).filter(Boolean);
+      };
+
+      const payload = {
+        id: currentAgreementId,
+        structured_data: {
+          party_1: editParty1.value.trim(),
+          party_2: editParty2.value.trim(),
+          agreement_purpose: editPurpose.value.trim(),
+          location: editLocation.value.trim(),
+          payment_amount: editAmount.value.trim(),
+          payment_terms: editTerms.value.trim(),
+          agreement_duration: editDuration.value.trim(),
+          witnesses: parseCSV(editWitnesses.value),
+          important_dates: parseCSV(editDates.value),
+          responsibilities: {
+            party_1: parseCSV(editP1Covenants.value),
+            party_2: parseCSV(editP2Covenants.value)
+          },
+          special_conditions: parseCSV(editConditions.value)
+        }
+      };
+
+      updateBtn.disabled = true;
+      updateBtn.querySelector("span").textContent = "Updating Draft...";
+
+      try {
+        const response = await fetch("/update-agreement", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.message || "Failed to update agreement");
+        }
+        
+        // Update views
+        jsonPreview.textContent = JSON.stringify(result.structured_data, null, 2);
+        currentAgreementText = result.agreement;
+        agreementPreview.innerHTML = formatMarkdown(result.agreement);
+
+        // Re-populate missing fields badges
+        const missingFields = result.missing_fields || [];
+        if (missingFields.length > 0) {
+          resValidationBadge.textContent = "Omissions Flagged";
+          resValidationBadge.className = "badge badge-warning";
+          
+          missingBadgesContainer.innerHTML = "";
+          missingFields.forEach(field => {
+            const badge = document.createElement("span");
+            badge.className = "badge badge-danger";
+            badge.textContent = field;
+            missingBadgesContainer.appendChild(badge);
+          });
+          missingFieldsBox.style.display = "block";
+        } else {
+          resValidationBadge.textContent = "Valid & Complete";
+          resValidationBadge.className = "badge badge-success";
+          missingFieldsBox.style.display = "none";
+        }
+
+        // Re-populate form highlights
+        populateEditForm(result.structured_data);
+
+        alert("Agreement draft successfully updated with new terms!");
+      } catch (err) {
+        console.error(err);
+        alert("Error updating draft: " + err.message);
+      } finally {
+        updateBtn.disabled = false;
+        updateBtn.querySelector("span").textContent = "Update Agreement Draft";
+      }
+    }
+
+    updateBtn.addEventListener("click", updateAgreementDraft);
+
+    // Copy To Clipboard
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(currentAgreementText);
+      const originalText = copyBtn.textContent;
+      copyBtn.textContent = "✓ Agreement Copied!";
+      setTimeout(() => {
+        copyBtn.textContent = originalText;
+      }, 2000);
+    });
+
+    // Download File
+    downloadBtn.addEventListener("click", () => {
+      const blob = new Blob([currentAgreementText], { type: "text/markdown;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `VoiceKarar_Agreement_${outputLangSelect.value}.md`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "5b1642a0-2176-4b6d-a2da-9788c0e7b76b": {
+    "id": "5b1642a0-2176-4b6d-a2da-9788c0e7b76b",
+    "transcript": "રોહન: હેલો જય, આપણે જે દુકાનના રિનોવેશન વિશે વાત કરી હતી, એ કામ શરૂ કરવાનું છે.\nજય: હા, હું તૈયાર છું. હું કામ કરી દઈશ.\nરોહન: સારું. હું થોડા પૈસા આજે આપી દઈશ અને બાકી પછી આપી દઈશ.\nજય: ઠીક છે.\nરોહન: કામ જલ્દી પૂરું થઈ જવું જોઈએ.\nજય: હું પ્રયત્ન કરીશ.\nરોહન: જો કામમાં મોડું થાય તો પછી વાત કરીશું.\nજય: બરાબર.\nરોહન: આપણે આજે આ વાત પર સંમત છીએ.\nજય: હા, હું પણ સંમત છું.",
+    "detected_language": "Gujarati",
+    "structured_data": {
+      "party_1": "રોહન",
+      "party_2": "જય",
+      "agreement_purpose": "દુકાનનું રિનોવેશન",
+      "payment_amount": "50000",
+      "payment_terms": "થોડા પૈસા આજે આપવા અને બાકીના પછી આપવા",
+      "agreement_duration": "Not Specified",
+      "responsibilities": {
+        "party_1": [
+          "પૈસા ચૂકવવા"
+        ],
+        "party_2": [
+          "દુકાનનું રિનોવેશનનું કામ કરવું"
+        ]
+      },
+      "important_dates": [
+        "આજે"
+      ],
+      "witnesses": [
+        "Not Specified"
+      ],
+      "special_conditions": [
+        "કામ જલ્દી પૂરું કરવું",
+        "કામમાં મોડું થાય તો પછી વાત કરવી"
+      ],
+      "location": "Vadodara"
+    },
+    "missing_fields": [
+      "Agreement Duration",
+      "Witnesses"
+    ],
+    "agreement": "# AGREEMENT FOR SHOP RENOVATION\n\nThis Agreement is made and entered into on this day in Vadodara.\n\n### 1. PARTIES\n**Party 1:** Rohan\n**Party 2:** Jay\n\n### 2. RECITALS\nThe purpose of this agreement is to facilitate the renovation of a shop located in Vadodara. Both parties have agreed to the terms and conditions set forth below to ensure the completion of the renovation work.\n\n### 3. TERMS OF PAYMENT\n*   **Total Amount:** 50,000 (Fifty Thousand)\n*   **Payment Terms:** A portion of the payment shall be made today, and the remaining balance shall be paid subsequently.\n\n### 4. DURATION & VALIDITY\n*   **Duration:** [Not Specified]\n\n### 5. COVENANTS & RESPONSIBILITIES\n*   **Responsibilities of Party 1 (Rohan):** Responsible for making the payments as agreed.\n*   **Responsibilities of Party 2 (Jay):** Responsible for executing the shop renovation work.\n\n### 6. SPECIAL CONDITIONS & PENALTIES\n*   The work must be completed expeditiously.\n*   In the event of any delay in the completion of the work, the parties shall discuss the matter further to reach a resolution.\n\n### 7. WITNESSES\n*   [Not Specified]\n\n### 8. SIGNATURES\n\n**Party 1 (Rohan):** __________________________\nDate: ________________\n\n**Party 2 (Jay):** __________________________\nDate: ________________\n\n**Witness 1:** __________________________\n\n**Witness 2:** __________________________",
+    "output_language": "English",
+    "created_at": "2026-07-17T17:35:58.413Z"
+  },
+  "bbc0d1b7-7ccb-4604-ac66-b4013739f8be": {
+    "id": "bbc0d1b7-7ccb-4604-ac66-b4013739f8be",
+    "transcript": "सौरभ: नमस्कार प्रिया, आपण घराच्या इंटिरियरच्या कामाबद्दल बोललो होतो ना?\nप्रिया: हो, मला आठवतंय. मी संपूर्ण हॉल आणि किचनचं इंटिरियर करून देईन.\nसौरभ: छान. या कामासाठी एकूण खर्च किती येईल?\nप्रिया: एकूण खर्च ₹२,२५,००० असेल.\nसौरभ: ठीक आहे. मी आज ₹७५,००० अॅडव्हान्स देतो आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर देईन.\nप्रिया: मला मान्य आहे.\nसौरभ: काम पूर्ण करायला किती वेळ लागेल?\nप्रिया: जास्तीत जास्त ४५ दिवसांत काम पूर्ण करून देईन.\nसौरभ: जर उशीर झाला तर?\nप्रिया: जर माझ्याकडून उशीर झाला तर प्रत्येक अतिरिक्त दिवसासाठी ₹१,००० दंड स्वीकारेन.\nसौरभ: आणि काम पूर्ण झाल्यानंतर काही हमी असेल का?\nप्रिया: हो, मी ६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा देईन.\nसौरभ: जर मला काही कारणामुळे काम अर्धवट रद्द करावं लागलं तर?\nप्रिया: काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास दिलेला अॅडव्हान्स परत मिळणार नाही.\nसौरभ: ठीक आहे.\nप्रिया: माझं पूर्ण नाव प्रिया देशमुख आहे आणि माझा मोबाईल नंबर ९८७६५४३२१० आहे.\nसौरभ: माझं पूर्ण नाव सौरभ कुलकर्णी आहे आणि माझा मोबाईल नंबर ९१२३४५६७८९ आहे.\nप्रिया: आपण दोघेही या अटींना पूर्णपणे सहमत आहोत.\nसौरभ: हो, मी या करारातील सर्व अटी मान्य करतो.",
+    "detected_language": "Marathi",
+    "structured_data": {
+      "party_1": "सौरभ कुलकर्णी",
+      "party_2": "प्रिया देशमुख",
+      "agreement_purpose": "घराच्या हॉल आणि किचनचे इंटिरियर काम",
+      "payment_amount": "₹२,२५,०००",
+      "payment_terms": "₹७५,००० अॅडव्हान्स आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर",
+      "agreement_duration": "४५ दिवस",
+      "responsibilities": {
+        "party_1": [
+          "अॅडव्हान्स पेमेंट करणे",
+          "काम पूर्ण झाल्यावर उर्वरित पेमेंट करणे"
+        ],
+        "party_2": [
+          "संपूर्ण हॉल आणि किचनचे इंटिरियर करून देणे",
+          "६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा देणे"
+        ]
+      },
+      "important_dates": [
+        "Not Specified"
+      ],
+      "witnesses": [
+        "Not Specified"
+      ],
+      "special_conditions": [
+        "उशीर झाल्यास प्रत्येक अतिरिक्त दिवसासाठी ₹१,००० दंड",
+        "काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास अॅडव्हान्स परत मिळणार नाही"
+      ],
+      "location": "Not Specified"
+    },
+    "missing_fields": [
+      "Location",
+      "Important Dates",
+      "Witnesses"
+    ],
+    "agreement": "# INTERIOR DESIGN AND EXECUTION AGREEMENT\n\nThis Agreement is made and entered into on this day by and between:\n\n**Party 1:** Saurabh Kulkarni (hereinafter referred to as the \"Client\")\n\n**AND**\n\n**Party 2:** Priya Deshmukh (hereinafter referred to as the \"Contractor\")\n\n### 1. PURPOSE OF AGREEMENT\nThe Client hereby engages the Contractor to perform interior design and execution work for the Hall and Kitchen (the \"Project\").\n\n### 2. TERMS OF PAYMENT\nThe total consideration for the Project is ₹2,25,000 (Two Lakh Twenty-Five Thousand Rupees only), payable as follows:\n*   **Advance Payment:** ₹75,000 (Seventy-Five Thousand Rupees) to be paid by the Client.\n*   **Final Payment:** ₹1,50,000 (One Lakh Fifty Thousand Rupees) to be paid by the Client upon successful completion of the work.\n\n### 3. DURATION AND VALIDITY\nThe Project shall be completed within a duration of 45 days from the commencement date.\n\n### 4. COVENANTS AND RESPONSIBILITIES\n**Responsibilities of Party 1 (Client):**\n*   To provide the advance payment as stipulated.\n*   To provide the remaining balance payment upon completion of the work.\n\n**Responsibilities of Party 2 (Contractor):**\n*   To execute the complete interior work for the Hall and Kitchen.\n*   To provide 6 months of free service and minor repair facilities post-completion.\n\n### 5. SPECIAL CONDITIONS AND PENALTIES\n*   **Delay Penalty:** In the event of a delay in completion, a penalty of ₹1,000 per day shall be charged for each additional day.\n*   **Cancellation Policy:** If the project is cancelled after the commencement of work, the advance payment shall not be refunded.\n\n### 6. LOCATION\n[Not Specified]\n\n### 7. WITNESSES\n[Not Specified]\n\n---\n\n### SIGNATURES\n\n**Party 1 (Client):** __________________________\nName: Saurabh Kulkarni\n\n**Party 2 (Contractor):** __________________________\nName: Priya Deshmukh\n\n**Witness 1:** __________________________\n\n**Witness 2:** __________________________",
+    "output_language": "English",
+    "created_at": "2026-07-18T05:31:21.086Z"
+  },
+  "6d6bf1e1-f4c3-4214-9fd0-d9e462d0fbc3": {
+    "id": "6d6bf1e1-f4c3-4214-9fd0-d9e462d0fbc3",
+    "transcript": "सौरभ: नमस्कार प्रिया, आपण घराच्या इंटिरियरच्या कामाबद्दल बोललो होतो ना?\nप्रिया: हो, मला आठवतंय. मी संपूर्ण हॉल आणि किचनचं इंटिरियर करून देईन.\nसौरभ: छान. या कामासाठी एकूण खर्च किती येईल?\nप्रिया: एकूण खर्च ₹२,२५,००० असेल.\nसौरभ: ठीक आहे. मी आज ₹७५,००० अॅडव्हान्स देतो आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर देईन.\nप्रिया: मला मान्य आहे.\nसौरभ: काम पूर्ण करायला किती वेळ लागेल?\nप्रिया: जास्तीत जास्त ४५ दिवसांत काम पूर्ण करून देईन.\nसौरभ: जर उशीर झाला तर?\nप्रिया: जर माझ्याकडून उशीर झाला तर प्रत्येक अतिरिक्त दिवसासाठी ₹१,००० दंड स्वीकारेन.\nसौरभ: आणि काम पूर्ण झाल्यानंतर काही हमी असेल का?\nप्रिया: हो, मी ६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा देईन.\nसौरभ: जर मला काही कारणामुळे काम अर्धवट रद्द करावं लागलं तर?\nप्रिया: काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास दिलेला अॅडव्हान्स परत मिळणार नाही.\nसौरभ: ठीक आहे.\nप्रिया: माझं पूर्ण नाव प्रिया देशमुख आहे आणि माझा मोबाईल नंबर ९८७६५४३२१० आहे.\nसौरभ: माझं पूर्ण नाव सौरभ कुलकर्णी आहे आणि माझा मोबाईल नंबर ९१२३४५६७८९ आहे.\nप्रिया: आपण दोघेही या अटींना पूर्णपणे सहमत आहोत.\nसौरभ: हो, मी या करारातील सर्व अटी मान्य करतो.",
+    "detected_language": "Marathi",
+    "structured_data": {
+      "party_1": "सौरभ कुलकर्णी",
+      "party_2": "प्रिया देशमुख",
+      "agreement_purpose": "घराच्या हॉल आणि किचनचे इंटिरियर काम",
+      "payment_amount": "₹२,२५,०००",
+      "payment_terms": "₹७५,००० अॅडव्हान्स आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर",
+      "agreement_duration": "४५ दिवस",
+      "responsibilities": {
+        "party_1": [
+          "अॅडव्हान्स पेमेंट करणे",
+          "काम पूर्ण झाल्यावर उर्वरित पेमेंट करणे"
+        ],
+        "party_2": [
+          "संपूर्ण हॉल आणि किचनचे इंटिरियर करून देणे",
+          "६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा देणे"
+        ]
+      },
+      "important_dates": [
+        "Not Specified"
+      ],
+      "witnesses": [
+        "Not Specified"
+      ],
+      "special_conditions": [
+        "उशीर झाल्यास प्रत्येक अतिरिक्त दिवसासाठी ₹१",
+        "००० दंड",
+        "काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास अॅडव्हान्स परत मिळणार नाही"
+      ],
+      "location": "MUMBAI"
+    },
+    "missing_fields": [
+      "Important Dates",
+      "Witnesses"
+    ],
+    "agreement": "# INTERIOR DESIGN AGREEMENT\n\n**THIS AGREEMENT** is made and entered into at **MUMBAI** on this [Date] day of [Month], [Year].\n\n### BETWEEN\n\n**SAURABH KULKARNI (सौरभ कुलकर्णी)**, hereinafter referred to as the \"Party 1\" (Client);\n\n**AND**\n\n**PRIYA DESHMUKH (प्रिया देशमुख)**, hereinafter referred to as the \"Party 2\" (Contractor).\n\n### 1. RECITALS / PURPOSE\nThe purpose of this Agreement is to define the terms and conditions for the interior design and execution work of the Hall and Kitchen at the specified location in Mumbai.\n\n### 2. TERMS OF PAYMENT\nThe total consideration for the project is **₹2,25,000 (Two Lakh Twenty-Five Thousand Rupees)**. The payment shall be made as follows:\n*   **Advance Payment:** ₹75,000 (Seventy-Five Thousand Rupees).\n*   **Final Payment:** ₹1,50,000 (One Lakh Fifty Thousand Rupees) payable upon completion of the work.\n\n### 3. DURATION & VALIDITY\nThe duration for the completion of the project is **45 days** from the commencement date.\n\n### 4. COVENANTS & RESPONSIBILITIES\n**Responsibilities of Party 1:**\n*   To provide the advance payment as stipulated.\n*   To provide the remaining balance payment upon successful completion of the work.\n\n**Responsibilities of Party 2:**\n*   To complete the interior work of the entire Hall and Kitchen.\n*   To provide 6 months of free service and minor repair facilities.\n\n### 5. SPECIAL CONDITIONS & PENALTIES\n*   **Delay Penalty:** In the event of a delay, a penalty of ₹1,000 per additional day shall be levied.\n*   **Cancellation:** If the project is cancelled after the commencement of work, the advance payment shall not be refunded.\n\n### 6. WITNESSES\n[Not Specified]\n\n### 7. SIGNATURES\n\n**Party 1 (Client):** __________________________\n(Saurabh Kulkarni / सौरभ कुलकर्णी)\n\n**Party 2 (Contractor):** __________________________\n(Priya Deshmukh / प्रिया देशमुख)\n\n**Witness 1:** __________________________\n\n**Witness 2:** __________________________",
+    "output_language": "English",
+    "created_at": "2026-07-18T05:40:40.770Z"
+  }
+}
