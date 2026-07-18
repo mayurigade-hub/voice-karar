@@ -1,0 +1,14 @@
+{
+  "name": "voice-karar-main",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix ai-agent install && npm --prefix frontend install",
+    "dev": "node scripts/dev.mjs",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:ai": "npm --prefix ai-agent run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build"
+  }
+}
