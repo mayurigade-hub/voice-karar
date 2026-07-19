@@ -16,7 +16,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(express.static("src/public"));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5001;
 
 // Initialize the Agent
 let agent: AgreementAgent;
@@ -264,7 +264,13 @@ app.post("/update-agreement", async (req: Request, res: Response): Promise<void>
  * GET /agreement/:id
  */
 app.get("/agreement/:id", (req: Request, res: Response) => {
-  const { id } = req.params;
+  const idParam = req.params.id;
+  const id = Array.isArray(idParam) ? idParam[0] : idParam;
+  if (!id) {
+    res.status(400).json({ error: "validation_error", message: "Agreement id is required." });
+    return;
+  }
+
   const db = loadAgreements();
   const record = db[id];
 

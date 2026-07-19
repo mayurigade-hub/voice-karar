@@ -22,6 +22,7 @@ export interface GenerateAgreementRequest {
   audio?: string; // base64 encoded audio
   audio_mime_type?: string; // e.g. audio/webm, audio/mp3, audio/wav
   output_language: string;
+  detected_language?: string;
 }
 
 export interface GenerateAgreementResponse {

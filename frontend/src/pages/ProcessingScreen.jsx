@@ -51,6 +51,12 @@ export default function ProcessingScreen() {
     mountedRef.current = true
 
     const run = async () => {
+      if (source === 'manual' && !String(text || '').trim()) {
+        setError('Please enter an agreement summary before generating an agreement.')
+        setLoading(false)
+        return
+      }
+
       // Animate the steps while the API call is in progress
       let stepIndex = 0
       const stepInterval = setInterval(() => {
@@ -169,7 +175,7 @@ export default function ProcessingScreen() {
                   )
                 })}
                 <p className="mt-4 text-sm text-[var(--ink)]/60">
-                  AI is processing your {source === 'manual' ? 'text' : 'audio'}. This may take 10–30 seconds…
+                  AI is processing your {source === 'manual' ? 'text' : 'audio'}. This may take 10-30 seconds...
                 </p>
               </div>
             )}
