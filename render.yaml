@@ -43,7 +43,6 @@ services:
   - type: web
     name: voice-karar-frontend
     env: static
-    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
