@@ -112,16 +112,11 @@ app.post("/generate-agreement", async (req: Request, res: Response): Promise<voi
       const detectionResult = await agent.detectLanguage(activeTranscript);
       console.log("Detection result:", detectionResult);
 
-      if (detectionResult.detected_language === "Unknown" || detectionResult.confidence < 0.8) {
-        res.status(400).json({
-          error: "low_confidence",
-          message: "Language detection confidence was low. Please manually specify the transcript language.",
-          detected_language: detectionResult.detected_language,
-          confidence: detectionResult.confidence
-        });
-        return;
+      if (detectionResult.detected_language && isLanguageSupported(detectionResult.detected_language)) {
+        finalDetectedLanguage = detectionResult.detected_language;
+      } else {
+        finalDetectedLanguage = "English";
       }
-      finalDetectedLanguage = detectionResult.detected_language;
     }
 
     // 4. Structured Data Extraction
