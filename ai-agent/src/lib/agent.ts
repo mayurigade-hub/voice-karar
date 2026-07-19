@@ -13,7 +13,11 @@ export class AgreementAgent {
       throw new Error("GEMINI_API_KEY is not defined. Please configure it in your environment or .env.local file.");
     }
     this.genAI = new GoogleGenerativeAI(key);
-    this.modelName = modelName;
+    if (!modelName || modelName === "gemini-1.5-flash" || modelName === "gemini-2.5-flash") {
+      this.modelName = "gemini-2.0-flash-lite";
+    } else {
+      this.modelName = modelName;
+    }
   }
 
   /**
