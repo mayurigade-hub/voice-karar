@@ -7,7 +7,7 @@ export class AgreementAgent {
   private genAI: GoogleGenerativeAI;
   private modelName: string;
 
-  constructor(apiKey?: string, modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash") {
+  constructor(apiKey?: string, modelName = process.env.GEMINI_MODEL || "gemini-1.5-flash") {
     const key = apiKey || process.env.GEMINI_API_KEY;
     if (!key) {
       throw new Error("GEMINI_API_KEY is not defined. Please configure it in your environment or .env.local file.");
