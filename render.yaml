@@ -3,6 +3,7 @@ services:
   - type: web
     name: voice-karar-backend
     env: node
+    plan: free
     buildCommand: npm install
     startCommand: npm start
     envVars:
@@ -17,16 +18,17 @@ services:
       - key: JWT_EXPIRES_IN
         value: 7d
       - key: CORS_ORIGIN
-        value: https://voice-karar.onrender.com # To be updated with actual frontend URL
+        value: https://voice-karar-frontend.onrender.com
       - key: APP_BASE_URL
-        value: https://voice-karar.onrender.com # To be updated with actual frontend URL
+        value: https://voice-karar-frontend.onrender.com
       - key: AI_AGENT_URL
-        value: http://voice-karar-ai-agent:5001 # Internal Render URL
+        value: http://voice-karar-ai-agent:5001
 
   # AI Agent Service
   - type: web
     name: voice-karar-ai-agent
     env: node
+    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
@@ -41,8 +43,9 @@ services:
   - type: web
     name: voice-karar-frontend
     env: static
+    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://voice-karar-backend.onrender.com/api/v1 # To be updated with actual backend URL
+        value: https://voice-karar-backend.onrender.com/api/v1

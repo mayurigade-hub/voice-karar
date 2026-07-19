@@ -121,5 +121,95 @@
     "agreement": "# INTERIOR DESIGN AGREEMENT\n\n**THIS AGREEMENT** is made and entered into at **MUMBAI** on this [Date] day of [Month], [Year].\n\n### BETWEEN\n\n**SAURABH KULKARNI (सौरभ कुलकर्णी)**, hereinafter referred to as the \"Party 1\" (Client);\n\n**AND**\n\n**PRIYA DESHMUKH (प्रिया देशमुख)**, hereinafter referred to as the \"Party 2\" (Contractor).\n\n### 1. RECITALS / PURPOSE\nThe purpose of this Agreement is to define the terms and conditions for the interior design and execution work of the Hall and Kitchen at the specified location in Mumbai.\n\n### 2. TERMS OF PAYMENT\nThe total consideration for the project is **₹2,25,000 (Two Lakh Twenty-Five Thousand Rupees)**. The payment shall be made as follows:\n*   **Advance Payment:** ₹75,000 (Seventy-Five Thousand Rupees).\n*   **Final Payment:** ₹1,50,000 (One Lakh Fifty Thousand Rupees) payable upon completion of the work.\n\n### 3. DURATION & VALIDITY\nThe duration for the completion of the project is **45 days** from the commencement date.\n\n### 4. COVENANTS & RESPONSIBILITIES\n**Responsibilities of Party 1:**\n*   To provide the advance payment as stipulated.\n*   To provide the remaining balance payment upon successful completion of the work.\n\n**Responsibilities of Party 2:**\n*   To complete the interior work of the entire Hall and Kitchen.\n*   To provide 6 months of free service and minor repair facilities.\n\n### 5. SPECIAL CONDITIONS & PENALTIES\n*   **Delay Penalty:** In the event of a delay, a penalty of ₹1,000 per additional day shall be levied.\n*   **Cancellation:** If the project is cancelled after the commencement of work, the advance payment shall not be refunded.\n\n### 6. WITNESSES\n[Not Specified]\n\n### 7. SIGNATURES\n\n**Party 1 (Client):** __________________________\n(Saurabh Kulkarni / सौरभ कुलकर्णी)\n\n**Party 2 (Contractor):** __________________________\n(Priya Deshmukh / प्रिया देशमुख)\n\n**Witness 1:** __________________________\n\n**Witness 2:** __________________________",
     "output_language": "English",
     "created_at": "2026-07-18T05:40:40.770Z"
+  },
+  "397894ad-941b-4ecb-886b-4c10c86a44c6": {
+    "id": "397894ad-941b-4ecb-886b-4c10c86a44c6",
+    "transcript": "राहुल नमस्ते अमित जी जैसा कि हमने पहले बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित जी बिल्कुल आपने बताया था कि आपको एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रोडक्ट लिस्टिंग और आर्डर ट्रैकिंग की सुविधा हो राहुल हां बिल्कुल वही चाहिए अमित इस पूरे प्रोजेक्ट की कुल लागत ₹50000 होगी राहुल ठीक है मैं अभी ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा अमित सही है मैं वेबसाइट 30 दिनों के अंदर पूरी करके आपको सौंप दूंगा राहुल अगर किसी कारण से काम समय पर पूरा नहीं हुआ तो अमित यदि मेरी वजह से देरी होती है तो मैं हर अतिरिक्त दिन के लिए ₹500 की पेनल्टी स्वीकार करता हूं राहुल अच्छा है वेबसाइट देने के बाद क्या कोई सपोर्ट भी मिलेगा अमित हाँ मैं 3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग दूंगा राहुल अगर मुझे बीच में प्रोजेक्ट रद्द करना पड़े तो अमित यदि काम शुरू होने के बाद आप प्रोजेक्ट रद्द करते हैं तो दिया गया एडवांस वापस नहीं किया जाएगा राहुल और अगर आप काम शुरू ही नहीं करते अमित ऐसी स्थिति में मैं पूरा एडवांस 7 दिनों के अंदर वापस कर दूंगा राहुल ठीक है यह समझौता आज यानी 17 जुलाई 2026 से लागू होगा अमित और इसकी वैधता तब तक रहेगी जब तक वेबसाइट पूरी होकर अंतिम भुगतान नहीं हो जाता राहुल हमारी मुलाकात पुणे महाराष्ट्र में हो रही है इसलिए यही इस समझौते का स्थान माना जाएगा अमित ठीक है राहुल मेरा पूरा नाम राहुल शर्मा है मेरा मोबाइल नंबर 9876543210 है अमित मेरा पूरा नाम अमित वर्मा है मेरा मोबाइल नंबर 9123456780 है राहुल इस समझौते के गवाह नेहा सिंह और रोहित पाटिल होंगे अमित दोनों गवाह हमारी उपस्थिति में हस्ताक्षर करेंगे राहुल क्या हमने सभी शर्तों पर सहमति बना ली है अमित जी हां मैं अपनी पूरी सहमति देता हूं राहुल मैं भी इस समझौते की सभी शर्तें स्वीकार करता हूं",
+    "detected_language": "Hindi",
+    "structured_data": {
+      "party_1": "राहुल शर्मा",
+      "party_2": "अमित वर्मा",
+      "agreement_purpose": "ई-कॉमर्स वेबसाइट का निर्माण",
+      "quantity": "1",
+      "unit_price": "Not Specified",
+      "total_amount": "₹50000",
+      "payment_amount": "₹50000",
+      "payment_terms": "₹20000 एडवांस और ₹30000 वेबसाइट पूरी होने के बाद",
+      "agreement_duration": "30 दिन",
+      "responsibilities": {
+        "party_1": [
+          "भुगतान करना"
+        ],
+        "party_2": [
+          "वेबसाइट बनाना",
+          "3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग प्रदान करना"
+        ]
+      },
+      "important_dates": [
+        "17 जुलाई 2026"
+      ],
+      "witnesses": [
+        "नेहा सिंह",
+        "रोहित पाटिल"
+      ],
+      "special_conditions": [
+        "देरी होने पर ₹500 प्रति दिन की पेनल्टी",
+        "काम शुरू होने के बाद प्रोजेक्ट रद्द करने पर एडवांस वापस नहीं होगा",
+        "काम शुरू न होने पर 7 दिनों के भीतर एडवांस वापस किया जाएगा"
+      ],
+      "location": "पुणे, महाराष्ट्र",
+      "delivery_location": "Not Specified",
+      "summary": "राहुल शर्मा और अमित वर्मा के बीच एक ई-कॉमर्स वेबसाइट बनाने के लिए ₹50000 का समझौता हुआ है, जिसमें भुगतान की शर्तें, समय सीमा और पेनल्टी क्लॉज शामिल हैं।"
+    },
+    "missing_fields": [],
+    "agreement": "# AGREEMENT FOR E-COMMERCE WEBSITE DEVELOPMENT\n\nThis Agreement is made and executed on this 17th day of July 2026, at Pune, Maharashtra.\n\n### BETWEEN\n\n**Rahul Sharma** (hereinafter referred to as \"Party 1\")\n\n### AND\n\n**Amit Verma** (hereinafter referred to as \"Party 2\")\n\n---\n\n### 1. PURPOSE OF AGREEMENT\nThe purpose of this Agreement is to define the terms and conditions for the development of an E-commerce website by Party 2 for Party 1.\n\n### 2. TERMS OF PAYMENT\n*   **Total Contract Value:** ₹50,000 (Rupees Fifty Thousand Only).\n*   **Payment Terms:** ₹20,000 (Rupees Twenty Thousand) as an advance payment, and the remaining ₹30,000 (Rupees Thirty Thousand) to be paid upon the successful completion of the website.\n\n### 3. DURATION AND VALIDITY\nThe duration for the completion of the project is 30 days from the date of commencement.\n\n### 4. COVENANTS AND RESPONSIBILITIES\n*   **Responsibilities of Party 1:**\n    *   To make the payments as per the agreed terms.\n*   **Responsibilities of Party 2:**\n    *   To develop the E-commerce website.\n    *   To provide free technical support and bug fixing for a period of 3 months post-completion.\n\n### 5. SPECIAL CONDITIONS AND PENALTIES\n*   **Delay Penalty:** In the event of a delay in project completion, a penalty of ₹500 per day shall be applicable.\n*   **Cancellation (Post-Commencement):** If the project is cancelled by Party 1 after the work has commenced, the advance payment shall not be refunded.\n*   **Cancellation (Pre-Commencement):** If the work does not commence, the advance payment shall be refunded to Party 1 within 7 days.\n\n### 6. DELIVERY LOCATION\n[Not Specified]\n\n### 7. WITNESSES\nThe execution of this Agreement is witnessed by:\n1. Neha Singh\n2. Rohit Patil\n\n---\n\n### SIGNATURES\n\n**Party 1 (Rahul Sharma):** __________________________\n\n**Party 2 (Amit Verma):** __________________________\n\n**Witness 1 (Neha Singh):** __________________________\n\n**Witness 2 (Rohit Patil):** __________________________",
+    "output_language": "English",
+    "created_at": "2026-07-19T15:54:15.196Z"
+  },
+  "d89ca5f7-503b-4613-b019-0351f2c3191b": {
+    "id": "d89ca5f7-503b-4613-b019-0351f2c3191b",
+    "transcript": "राहुल: नमस्ते अमित जी। जैसा की हमने पहले बात की थी, मैं अपनी वेबसाइट बनवाना चाहता हूँ।\nअमित: जी बिल्कुल। आपने बताया था कि आपको एक ई-कॉमर्स वेबसाइट चाहिए, जिसमें ऑनलाइन पेमेंट, प्रोडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो।\nराहुल: हाँ, बिल्कुल वही चाहिए।\nअमित: इस पूरे प्रोजेक्ट की कुल लागत ₹50,000 होगी।\nराहुल: ठीक है। मैं अभी ₹20,000 एडवांस दे देता हूँ और बाकी ₹30,000 वेबसाइट पूरी होने के बाद दूँगा।\nअमित: सही है। मैं वेबसाइट 30 दिनों के अंदर पूरी करके आपको सौंप दूँगा।\nराहुल: अगर किसी कारण से काम समय पर पूरा नहीं हुआ तो?\nअमित: यदि मेरी वजह से देरी होती है, तो मैं हर अतिरिक्त दिन के लिए ₹500 की पेनल्टी स्वीकार करता हूँ।\nराहुल: अच्छा है। वेबसाइट देने के बाद क्या कोई सपोर्ट भी मिलेगा?\nअमित: हाँ, मैं 3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग दूँगा।\nराहुल: अगर मुझे बीच में प्रोजेक्ट रद्द करना पड़े तो?\nअमित: यदि काम शुरू होने के बाद आप प्रोजेक्ट रद्द करते हैं, तो दिया गया एडवांस वापस नहीं किया जाएगा।\nराहुल: और अगर आप काम शुरू ही नहीं करते?\nअमित: ऐसी स्थिति में मैं पूरा एडवांस 7 दिनों के अंदर वापस कर दूँगा।\nराहुल: ठीक है। यह समझौता आज यानी 17 जुलाई 2026 से लागू होगा।\nअमित: और इसकी वैधता तब तक रहेगी जब तक वेबसाइट पूरी होकर अंतिम भुगतान नहीं हो जाता।\nराहुल: हमारी मुलाकात पुणे, महाराष्ट्र में हो रही है, इसलिए यही इस समझौते का स्थान माना जाएगा।\nअमित: ठीक है।\nराहुल: मेरा पूरा नाम राहुल शर्मा है। मेरा मोबाइल नंबर 9876543210 है।\nअमित: मेरा पूरा नाम अमित वर्मा है। मेरा मोबाइल नंबर 9123456780 है।\nराहुल: इस समझौते के गवाह नेहा सिंह और रोहित पाटिल होंगे।\nअमित: दोनों गवाह हमारी उपस्थिति में हस्ताक्षर करेंगे।\nराहुल: क्या हमने सभी शर्तों पर सहमति बना ली है?\nअमित: जी हाँ, मैं अपनी पूरी सहमति देता हूँ।\nराहुल: मैं भी इस समझौते की सभी शर्तें स्वीकार करता हूँ।",
+    "detected_language": "Hindi",
+    "structured_data": {
+      "party_1": "राहुल शर्मा",
+      "party_2": "अमित वर्मा",
+      "agreement_purpose": "ई-कॉमर्स वेबसाइट का निर्माण",
+      "quantity": "1",
+      "unit_price": "Not Specified",
+      "total_amount": "₹50,000",
+      "payment_amount": "₹50,000",
+      "payment_terms": "₹20,000 एडवांस और बाकी ₹30,000 वेबसाइट पूरी होने के बाद",
+      "agreement_duration": "30 दिन",
+      "responsibilities": {
+        "party_1": [
+          "₹20,000 एडवांस भुगतान करना",
+          "बाकी ₹30,000 का भुगतान वेबसाइट पूरी होने पर करना"
+        ],
+        "party_2": [
+          "30 दिनों के अंदर वेबसाइट पूरी करना",
+          "3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग प्रदान करना"
+        ]
+      },
+      "important_dates": [
+        "17 जुलाई 2026",
+        "7 दिनों के अंदर एडवांस वापसी (यदि काम शुरू नहीं हुआ)"
+      ],
+      "witnesses": [
+        "नेहा सिंह",
+        "रोहित पाटिल"
+      ],
+      "special_conditions": [
+        "देरी होने पर ₹500 प्रति दिन की पेनल्टी",
+        "काम शुरू होने के बाद प्रोजेक्ट रद्द करने पर एडवांस वापस नहीं होगा",
+        "काम शुरू न होने पर 7 दिनों के अंदर एडवांस वापसी"
+      ],
+      "location": "पुणे, महाराष्ट्र",
+      "delivery_location": "Not Specified",
+      "summary": "राहुल शर्मा और अमित वर्मा के बीच ₹50,000 में एक ई-कॉमर्स वेबसाइट बनाने का समझौता हुआ है, जिसमें 30 दिनों की समय सीमा और तकनीकी सहायता की शर्तें शामिल हैं।"
+    },
+    "missing_fields": [],
+    "agreement": "# AGREEMENT FOR E-COMMERCE WEBSITE DEVELOPMENT\n\nThis Agreement is made and executed on this 17th day of July 2026, at Pune, Maharashtra.\n\n### BETWEEN\n\n**Rahul Sharma** (hereinafter referred to as \"Party 1\")\n\n### AND\n\n**Amit Verma** (hereinafter referred to as \"Party 2\")\n\n---\n\n### 1. RECITALS / PURPOSE\nThe purpose of this Agreement is to define the terms and conditions for the development of an E-commerce website by Party 2 for Party 1.\n\n### 2. TERMS OF PAYMENT\n*   **Total Amount:** ₹50,000\n*   **Payment Terms:** Party 1 shall pay an advance of ₹20,000. The remaining balance of ₹30,000 shall be paid upon the successful completion of the website.\n\n### 3. DURATION & VALIDITY\n*   **Project Duration:** 30 days from the commencement of the agreement.\n*   **Effective Date:** 17 July 2026.\n\n### 4. COVENANTS & RESPONSIBILITIES\n**Responsibilities of Party 1:**\n*   To pay the advance amount of ₹20,000.\n*   To pay the remaining balance of ₹30,000 upon completion of the website.\n\n**Responsibilities of Party 2:**\n*   To complete the website development within 30 days.\n*   To provide free technical support and bug fixing for a period of 3 months.\n\n### 5. SPECIAL CONDITIONS & PENALTIES\n*   **Delay Penalty:** A penalty of ₹500 per day shall be applicable in case of delay in project completion.\n*   **Cancellation Policy:** If the project is cancelled after the work has commenced, the advance payment shall not be refunded.\n*   **Refund Policy:** In the event that the work does not commence, the advance payment shall be refunded within 7 days.\n\n### 6. WITNESSES\n1. Neha Singh\n2. Rohit Patil\n\n---\n\n### SIGNATURES\n\n**Party 1:** __________________________\n(Rahul Sharma)\n\n**Party 2:** __________________________\n(Amit Verma)\n\n**Witness 1:** ________________________\n(Neha Singh)\n\n**Witness 2:** ________________________\n(Rohit Patil)",
+    "output_language": "English",
+    "created_at": "2026-07-19T15:54:17.299Z"
   }
 }

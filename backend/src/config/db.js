@@ -55,15 +55,22 @@ mongoose.connection.on('error', (err) => {
   console.error(`[DB] MongoDB connection error: ${err.message}`);
 });
 
-// ─── Connect ─────────────────────────────────────────────────────────────────
+let mongod = null;
 
 /**
  * Establishes the MongoDB connection.
  * Called once at server startup — before app.listen().
- * Throws on failure so the server can exit cleanly instead of starting in a broken state.
+ * Falls back to an in-memory MongoDB instance if MONGO_URI is not configured in dev.
  */
 export const connectDB = async () => {
-  await mongoose.connect(config.mongoUri, MONGOOSE_OPTIONS);
+  let uri = config.mongoUri;
+  if (!uri) {
+    console.log('[DB] No MONGO_URI provided in .env — starting in-memory MongoDB for local testing...');
+    const { MongoMemoryServer } = await import('mongodb-memory-server');
+    mongod = await MongoMemoryServer.create();
+    uri = mongod.getUri();
+  }
+  await mongoose.connect(uri, MONGOOSE_OPTIONS);
 };
 
 // ─── Disconnect ───────────────────────────────────────────────────────────────
@@ -74,6 +81,9 @@ export const connectDB = async () => {
  */
 export const disconnectDB = async () => {
   await mongoose.disconnect();
+  if (mongod) {
+    await mongod.stop();
+  }
   console.log('[DB] MongoDB connection closed.');
 };
 
