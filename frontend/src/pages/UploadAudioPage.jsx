@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { CheckCircle2, FolderUp, Play, Plus, Trash2 } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
+import { FolderUp, Play, Pause, Plus, Trash2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import Button from '../components/Button'
 import Card from '../components/Card'
@@ -9,19 +9,57 @@ export default function UploadAudioPage() {
   const [file, setFile] = useState(null)
   const [dragActive, setDragActive] = useState(false)
   const [progress, setProgress] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef(null)
+
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause()
+      }
+    }
+  }, [])
 
   const handleFile = (selectedFile) => {
     if (!selectedFile) return
+    if (audioRef.current) {
+      audioRef.current.pause()
+      setIsPlaying(false)
+    }
     setFile(selectedFile)
     setProgress(30)
     setTimeout(() => setProgress(70), 400)
     setTimeout(() => setProgress(100), 800)
+
+    audioRef.current = new Audio(URL.createObjectURL(selectedFile))
+    audioRef.current.onended = () => setIsPlaying(false)
   }
 
   const handleDrop = (event) => {
     event.preventDefault()
     setDragActive(false)
     handleFile(event.dataTransfer.files?.[0])
+  }
+
+  const handleTogglePlay = () => {
+    if (!audioRef.current) return
+    if (isPlaying) {
+      audioRef.current.pause()
+      setIsPlaying(false)
+    } else {
+      audioRef.current.play()
+      setIsPlaying(true)
+    }
+  }
+
+  const handleRemove = () => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current = null
+    }
+    setFile(null)
+    setIsPlaying(false)
+    setProgress(0)
   }
 
   return (
@@ -57,8 +95,10 @@ export default function UploadAudioPage() {
                     <p className="text-sm text-[var(--ink)]/70">{Math.round(file.size / 1024)} KB</p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <button className="border border-[var(--ledger-line)] bg-[var(--paper)] p-2" title="Preview"><Play className="h-4 w-4 text-[var(--seal)]" /></button>
-                    <button className="border border-[var(--ledger-line)] bg-[var(--paper)] p-2" title="Remove" onClick={() => { setFile(null); setProgress(0) }}><Trash2 className="h-4 w-4" /></button>
+                    <button className="border border-[var(--ledger-line)] bg-[var(--paper)] p-2" title="Preview" onClick={handleTogglePlay}>
+                      {isPlaying ? <Pause className="h-4 w-4 text-[var(--seal)]" /> : <Play className="h-4 w-4 text-[var(--seal)]" />}
+                    </button>
+                    <button className="border border-[var(--ledger-line)] bg-[var(--paper)] p-2" title="Remove" onClick={handleRemove}><Trash2 className="h-4 w-4" /></button>
                   </div>
                 </div>
                 <div className="mt-4 h-2 bg-[var(--ledger-line)]">

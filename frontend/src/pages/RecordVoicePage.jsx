@@ -15,6 +15,7 @@ export default function RecordVoicePage() {
   const [isRecording, setIsRecording] = useState(false)
   const [elapsed, setElapsed] = useState(0)
   const [waveform, setWaveform] = useState(Array.from({ length: 24 }, () => 24))
+  const [errorMsg, setErrorMsg] = useState('')
   const mediaRecorderRef = useRef(null)
   const audioChunksRef = useRef([])
   const analyserRef = useRef(null)
@@ -26,13 +27,15 @@ export default function RecordVoicePage() {
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current)
       if (streamRef.current) streamRef.current.getTracks().forEach((track) => track.stop())
+      if (audioContextRef.current) audioContextRef.current.close()
+      if (window.__voiceTimer) clearInterval(window.__voiceTimer)
     }
   }, [])
 
   const startVisualization = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
     streamRef.current = stream
-    const context = new AudioContext()
+    const context = new (window.AudioContext || window.webkitAudioContext)()
     const source = context.createMediaStreamSource(stream)
     const analyser = context.createAnalyser()
     analyser.fftSize = 128
@@ -54,9 +57,21 @@ export default function RecordVoicePage() {
   }
 
   const handleStart = async () => {
+    setErrorMsg('')
     setIsRecording(true)
     setElapsed(0)
-    await startVisualization()
+    try {
+      await startVisualization()
+    } catch (err) {
+      console.error('Failed to access microphone:', err)
+      setIsRecording(false)
+      setErrorMsg(
+        err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError'
+          ? 'Microphone access denied. Please check your browser permissions.'
+          : 'Could not access microphone. Please make sure a microphone is connected.'
+      )
+      return
+    }
 
     const chunks = []
     audioChunksRef.current = chunks
@@ -75,17 +90,18 @@ export default function RecordVoicePage() {
 
   const handleStop = () => {
     if (!mediaRecorderRef.current) return
-    mediaRecorderRef.current.stop()
-    if (animationRef.current) cancelAnimationFrame(animationRef.current)
-    if (audioContextRef.current) audioContextRef.current.close()
-    if (streamRef.current) streamRef.current.getTracks().forEach((track) => track.stop())
-    clearInterval(window.__voiceTimer)
-    setIsRecording(false)
 
     mediaRecorderRef.current.onstop = () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current)
+      if (audioContextRef.current) audioContextRef.current.close()
+      if (streamRef.current) streamRef.current.getTracks().forEach((track) => track.stop())
       const blob = new Blob(audioChunksRef.current, { type: 'audio/webm' })
       navigate('/processing', { state: { audio: blob, source: 'live' } })
     }
+
+    mediaRecorderRef.current.stop()
+    clearInterval(window.__voiceTimer)
+    setIsRecording(false)
   }
 
   return (
@@ -100,6 +116,12 @@ export default function RecordVoicePage() {
         <main className="flex flex-1 items-center justify-center py-8">
           <Card tone="stamp" className="w-full max-w-3xl border-t-4 border-t-[var(--seal)]">
             <div className="flex flex-col items-center gap-6 text-center">
+              {errorMsg && (
+                <div className="w-full rounded-none border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                  {errorMsg}
+                </div>
+              )}
+
               <div className={`flex h-32 w-32 items-center justify-center rounded-full border-2 border-[var(--seal)] ${isRecording ? 'bg-[var(--seal)] text-[var(--paper)]' : 'bg-[var(--paper)] text-[var(--seal)]'}`}>
                 <Mic className="h-12 w-12" />
               </div>
