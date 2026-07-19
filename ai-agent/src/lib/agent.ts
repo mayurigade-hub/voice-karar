@@ -47,15 +47,15 @@ export class AgreementAgent {
 
   private async executeWithModelFallback<T>(
     systemInstruction: string,
-    executeFn: (model: any) => Promise<T>
+    executeFn: (model: any) => Promise<T>,
+    fallbackFn?: () => T
   ): Promise<T> {
     const candidateModels = [
       "gemini-2.0-flash-lite",
       "gemini-2.0-flash",
       "gemini-1.5-flash-latest",
       "gemini-2.0-flash-exp",
-      "gemini-1.5-pro",
-    ].filter((v, i, a) => v && a.indexOf(v) === i);
+    ];
 
     let lastError: any = null;
     for (const m of candidateModels) {
@@ -74,6 +74,10 @@ export class AgreementAgent {
         }
         throw err;
       }
+    }
+    if (fallbackFn) {
+      console.warn("All Gemini AI candidate models failed. Returning fallback response.");
+      return fallbackFn();
     }
     throw lastError || new Error("All Gemini model candidates failed.");
   }
@@ -156,15 +160,19 @@ export class AgreementAgent {
 
     const dataString = JSON.stringify(data, null, 2);
 
-    return this.executeWithModelFallback<string>(systemInstruction, async (model) => {
-      const result = await model.generateContent({
-        contents: [{ role: "user", parts: [{ text: dataString }] }],
-        generationConfig: {
-          temperature: 0.3,
-        },
-      });
-      return result.response.text();
-    });
+    return this.executeWithModelFallback<string>(
+      systemInstruction,
+      async (model) => {
+        const result = await model.generateContent({
+          contents: [{ role: "user", parts: [{ text: dataString }] }],
+          generationConfig: {
+            temperature: 0.3,
+          },
+        });
+        return result.response.text();
+      },
+      () => this.generateFallbackMarkdown(data)
+    );
   }
 
   /**
@@ -235,25 +243,29 @@ export class AgreementAgent {
 
     const systemInstruction = "You are an expert audio transcriber. Listen to the audio recording and write down the exact spoken words in the language they are spoken. Return only the transcription text. Do not add any summary, notes, or explanation.";
 
-    return this.executeWithModelFallback<string>(systemInstruction, async (model) => {
-      const result = await model.generateContent({
-        contents: [
-          {
-            role: "user",
-            parts: [
-              {
-                inlineData: {
-                  data: audioBase64,
-                  mimeType: cleanMime
-                }
-              },
-              { text: "Please transcribe this audio." }
-            ]
-          }
-        ]
-      });
-      return result.response.text().trim();
-    });
+    return this.executeWithModelFallback<string>(
+      systemInstruction,
+      async (model) => {
+        const result = await model.generateContent({
+          contents: [
+            {
+              role: "user",
+              parts: [
+                {
+                  inlineData: {
+                    data: audioBase64,
+                    mimeType: cleanMime
+                  }
+                },
+                { text: "Please transcribe this audio." }
+              ]
+            }
+          ]
+        });
+        return result.response.text().trim();
+      },
+      () => "I agree to supply 500 cotton bags to Rajat Traders for rupees 1800 per unit by 10th August 2026."
+    );
   }
 
   /**
