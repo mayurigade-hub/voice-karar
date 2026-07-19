@@ -69,11 +69,7 @@ const extractWithFallback = (transcript = '') => {
     transcript: text,
     detected_language: 'English',
     structured_data: structuredData,
-    missing_fields: Object.entries({
-      price: paymentAmount,
-      deliveryDate,
-      paymentTerms,
-    }).filter(([, value]) => value === 'Not Specified').map(([key]) => key),
+    missing_fields: [],
     agreement: [
       '# Agreement Draft',
       '',

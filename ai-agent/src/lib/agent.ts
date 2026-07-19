@@ -19,7 +19,7 @@ export class AgreementAgent {
   /**
    * Helper to execute prompt and return parsed JSON
    */
-  private async withRetry<T>(fn: () => Promise<T>, retries = 4, delayMs = 3000): Promise<T> {
+  private async withRetry<T>(fn: () => Promise<T>, retries = 1, delayMs = 1000): Promise<T> {
     try {
       return await fn();
     } catch (error: any) {
@@ -46,7 +46,7 @@ export class AgreementAgent {
     const model = this.genAI.getGenerativeModel({
       model: this.modelName,
       systemInstruction: systemInstruction,
-    }, { timeout: 15000 });
+    }, { timeout: 45000 });
 
     const result = await this.withRetry(() => model.generateContent({
       contents: [{ role: "user", parts: [{ text: promptContent }] }],
@@ -193,10 +193,11 @@ export class AgreementAgent {
    * Transcribes audio using Gemini's multimodal audio understanding capability
    */
   async transcribeAudio(audioBase64: string, mimeType: string): Promise<string> {
+    const cleanMime = (String(mimeType || "audio/webm").split(";")[0] || "audio/webm").trim().toLowerCase();
     const model = this.genAI.getGenerativeModel({
       model: this.modelName,
       systemInstruction: "You are an expert audio transcriber. Listen to the audio recording and write down the exact spoken words in the language they are spoken. Return only the transcription text. Do not add any summary, notes, or explanation.",
-    }, { timeout: 25000 });
+    }, { timeout: 45000 });
 
     const result = await this.withRetry(() => model.generateContent({
       contents: [
@@ -206,7 +207,7 @@ export class AgreementAgent {
             {
               inlineData: {
                 data: audioBase64,
-                mimeType: mimeType
+                mimeType: cleanMime
               }
             },
             { text: "Please transcribe this audio." }

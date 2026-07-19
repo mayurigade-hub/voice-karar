@@ -33,7 +33,6 @@ export const blobToBase64 = (blob) => {
  * @returns {string}
  */
 export const getAudioMimeType = (blob) => {
-  if (blob?.type && blob.type !== '') return blob.type
-  // MediaRecorder on most browsers defaults to audio/webm
-  return 'audio/webm'
+  const type = (blob?.type || 'audio/webm').split(';')[0].trim().toLowerCase()
+  return type || 'audio/webm'
 }
