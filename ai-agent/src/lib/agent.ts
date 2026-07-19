@@ -7,7 +7,7 @@ export class AgreementAgent {
   private genAI: GoogleGenerativeAI;
   private modelName: string;
 
-  constructor(apiKey?: string, modelName = process.env.GEMINI_MODEL || "gemini-1.5-flash") {
+  constructor(apiKey?: string, modelName = process.env.GEMINI_MODEL || "gemini-2.0-flash") {
     const key = apiKey || process.env.GEMINI_API_KEY;
     if (!key) {
       throw new Error("GEMINI_API_KEY is not defined. Please configure it in your environment or .env.local file.");
@@ -25,11 +25,14 @@ export class AgreementAgent {
     } catch (error: any) {
       const status = error?.status;
       const details = JSON.stringify(error?.errorDetails || []);
+      const errMsg = String(error?.message || "");
       const isInvalidApiKey =
         status === 400 &&
-        (details.includes("API_KEY_INVALID") || String(error?.message || "").includes("API key not valid"));
+        (details.includes("API_KEY_INVALID") || errMsg.includes("API key not valid"));
 
-      if (isInvalidApiKey) {
+      const is404 = status === 404 || errMsg.includes("404") || errMsg.includes("not found") || errMsg.includes("not supported");
+
+      if (isInvalidApiKey || is404) {
         throw error;
       }
 
