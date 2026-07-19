@@ -24,7 +24,7 @@ services:
         value: http://voice-karar-ai-agent:5001 # Internal Render URL
 
   # AI Agent Service
-  - type: pserv
+  - type: web
     name: voice-karar-ai-agent
     env: node
     buildCommand: npm install && npm run build

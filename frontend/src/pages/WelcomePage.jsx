@@ -313,7 +313,7 @@ export default function WelcomePage() {
                     <div>
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-[12px] font-bold uppercase tracking-wider text-[#736862] flex items-center gap-2">
-                        <span className={`h-2 w-2 rounded-full ${extractionComplete ? 'bg-[#557b6e]' : 'bg-amber-500 animate-ping'}`} />
+                          <span className={`h-2 w-2 rounded-full ${extractionComplete ? 'bg-[#557b6e]' : 'bg-amber-500 animate-ping'}`} />
                           {extractionComplete ? 'All Checks Complete' : 'AI Processing Audio'}
                         </span>
                         <span className="text-[11px] font-semibold text-[#bc6f62]">
@@ -329,8 +329,8 @@ export default function WelcomePage() {
                             <div
                               key={idx}
                               className={`border rounded-xl p-3 transition-all duration-500 ${isLoaded
-                                  ? 'border-[#cae8dd] bg-[#e5f1e9]/40 scale-100 opacity-100 shadow-sm'
-                                  : 'border-[#f4eae5] bg-gray-50/50 scale-95 opacity-30'
+                                ? 'border-[#cae8dd] bg-[#e5f1e9]/40 scale-100 opacity-100 shadow-sm'
+                                : 'border-[#f4eae5] bg-gray-50/50 scale-95 opacity-30'
                                 }`}
                             >
                               <p className="text-[11px] font-bold text-[#8c7e77] uppercase tracking-wider">
