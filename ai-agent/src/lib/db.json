@@ -122,117 +122,131 @@
     "output_language": "English",
     "created_at": "2026-07-18T05:40:40.770Z"
   },
-  "397894ad-941b-4ecb-886b-4c10c86a44c6": {
-    "id": "397894ad-941b-4ecb-886b-4c10c86a44c6",
-    "transcript": "राहुल नमस्ते अमित जी जैसा कि हमने पहले बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित जी बिल्कुल आपने बताया था कि आपको एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रोडक्ट लिस्टिंग और आर्डर ट्रैकिंग की सुविधा हो राहुल हां बिल्कुल वही चाहिए अमित इस पूरे प्रोजेक्ट की कुल लागत ₹50000 होगी राहुल ठीक है मैं अभी ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा अमित सही है मैं वेबसाइट 30 दिनों के अंदर पूरी करके आपको सौंप दूंगा राहुल अगर किसी कारण से काम समय पर पूरा नहीं हुआ तो अमित यदि मेरी वजह से देरी होती है तो मैं हर अतिरिक्त दिन के लिए ₹500 की पेनल्टी स्वीकार करता हूं राहुल अच्छा है वेबसाइट देने के बाद क्या कोई सपोर्ट भी मिलेगा अमित हाँ मैं 3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग दूंगा राहुल अगर मुझे बीच में प्रोजेक्ट रद्द करना पड़े तो अमित यदि काम शुरू होने के बाद आप प्रोजेक्ट रद्द करते हैं तो दिया गया एडवांस वापस नहीं किया जाएगा राहुल और अगर आप काम शुरू ही नहीं करते अमित ऐसी स्थिति में मैं पूरा एडवांस 7 दिनों के अंदर वापस कर दूंगा राहुल ठीक है यह समझौता आज यानी 17 जुलाई 2026 से लागू होगा अमित और इसकी वैधता तब तक रहेगी जब तक वेबसाइट पूरी होकर अंतिम भुगतान नहीं हो जाता राहुल हमारी मुलाकात पुणे महाराष्ट्र में हो रही है इसलिए यही इस समझौते का स्थान माना जाएगा अमित ठीक है राहुल मेरा पूरा नाम राहुल शर्मा है मेरा मोबाइल नंबर 9876543210 है अमित मेरा पूरा नाम अमित वर्मा है मेरा मोबाइल नंबर 9123456780 है राहुल इस समझौते के गवाह नेहा सिंह और रोहित पाटिल होंगे अमित दोनों गवाह हमारी उपस्थिति में हस्ताक्षर करेंगे राहुल क्या हमने सभी शर्तों पर सहमति बना ली है अमित जी हां मैं अपनी पूरी सहमति देता हूं राहुल मैं भी इस समझौते की सभी शर्तें स्वीकार करता हूं",
+  "33c4092b-561c-4651-8c5b-5edc4582cafc": {
+    "id": "33c4092b-561c-4651-8c5b-5edc4582cafc",
+    "transcript": "राहुल नमस्ते अमित जी, ई-कॉमर्स वेबसाइट ₹50,000 में बनेगी। ₹20,000 एडवांस देंगे और बाकी ₹30,000 काम पूरा होने पर देंगे। वेबसाइट 30 दिनों में तैयार होगी।",
     "detected_language": "Hindi",
     "structured_data": {
-      "party_1": "राहुल शर्मा",
-      "party_2": "अमित वर्मा",
-      "agreement_purpose": "ई-कॉमर्स वेबसाइट का निर्माण",
-      "quantity": "1",
-      "unit_price": "Not Specified",
-      "total_amount": "₹50000",
-      "payment_amount": "₹50000",
-      "payment_terms": "₹20000 एडवांस और ₹30000 वेबसाइट पूरी होने के बाद",
-      "agreement_duration": "30 दिन",
-      "responsibilities": {
-        "party_1": [
-          "भुगतान करना"
-        ],
-        "party_2": [
-          "वेबसाइट बनाना",
-          "3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग प्रदान करना"
-        ]
-      },
-      "important_dates": [
-        "17 जुलाई 2026"
-      ],
-      "witnesses": [
-        "नेहा सिंह",
-        "रोहित पाटिल"
-      ],
-      "special_conditions": [
-        "देरी होने पर ₹500 प्रति दिन की पेनल्टी",
-        "काम शुरू होने के बाद प्रोजेक्ट रद्द करने पर एडवांस वापस नहीं होगा",
-        "काम शुरू न होने पर 7 दिनों के भीतर एडवांस वापस किया जाएगा"
-      ],
-      "location": "पुणे, महाराष्ट्र",
-      "delivery_location": "Not Specified",
-      "summary": "राहुल शर्मा और अमित वर्मा के बीच एक ई-कॉमर्स वेबसाइट बनाने के लिए ₹50000 का समझौता हुआ है, जिसमें भुगतान की शर्तें, समय सीमा और पेनल्टी क्लॉज शामिल हैं।"
-    },
-    "missing_fields": [],
-    "agreement": "# AGREEMENT FOR E-COMMERCE WEBSITE DEVELOPMENT\n\nThis Agreement is made and executed on this 17th day of July 2026, at Pune, Maharashtra.\n\n### BETWEEN\n\n**Rahul Sharma** (hereinafter referred to as \"Party 1\")\n\n### AND\n\n**Amit Verma** (hereinafter referred to as \"Party 2\")\n\n---\n\n### 1. PURPOSE OF AGREEMENT\nThe purpose of this Agreement is to define the terms and conditions for the development of an E-commerce website by Party 2 for Party 1.\n\n### 2. TERMS OF PAYMENT\n*   **Total Contract Value:** ₹50,000 (Rupees Fifty Thousand Only).\n*   **Payment Terms:** ₹20,000 (Rupees Twenty Thousand) as an advance payment, and the remaining ₹30,000 (Rupees Thirty Thousand) to be paid upon the successful completion of the website.\n\n### 3. DURATION AND VALIDITY\nThe duration for the completion of the project is 30 days from the date of commencement.\n\n### 4. COVENANTS AND RESPONSIBILITIES\n*   **Responsibilities of Party 1:**\n    *   To make the payments as per the agreed terms.\n*   **Responsibilities of Party 2:**\n    *   To develop the E-commerce website.\n    *   To provide free technical support and bug fixing for a period of 3 months post-completion.\n\n### 5. SPECIAL CONDITIONS AND PENALTIES\n*   **Delay Penalty:** In the event of a delay in project completion, a penalty of ₹500 per day shall be applicable.\n*   **Cancellation (Post-Commencement):** If the project is cancelled by Party 1 after the work has commenced, the advance payment shall not be refunded.\n*   **Cancellation (Pre-Commencement):** If the work does not commence, the advance payment shall be refunded to Party 1 within 7 days.\n\n### 6. DELIVERY LOCATION\n[Not Specified]\n\n### 7. WITNESSES\nThe execution of this Agreement is witnessed by:\n1. Neha Singh\n2. Rohit Patil\n\n---\n\n### SIGNATURES\n\n**Party 1 (Rahul Sharma):** __________________________\n\n**Party 2 (Amit Verma):** __________________________\n\n**Witness 1 (Neha Singh):** __________________________\n\n**Witness 2 (Rohit Patil):** __________________________",
-    "output_language": "English",
-    "created_at": "2026-07-19T15:54:15.196Z"
-  },
-  "d89ca5f7-503b-4613-b019-0351f2c3191b": {
-    "id": "d89ca5f7-503b-4613-b019-0351f2c3191b",
-    "transcript": "राहुल: नमस्ते अमित जी। जैसा की हमने पहले बात की थी, मैं अपनी वेबसाइट बनवाना चाहता हूँ।\nअमित: जी बिल्कुल। आपने बताया था कि आपको एक ई-कॉमर्स वेबसाइट चाहिए, जिसमें ऑनलाइन पेमेंट, प्रोडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो।\nराहुल: हाँ, बिल्कुल वही चाहिए।\nअमित: इस पूरे प्रोजेक्ट की कुल लागत ₹50,000 होगी।\nराहुल: ठीक है। मैं अभी ₹20,000 एडवांस दे देता हूँ और बाकी ₹30,000 वेबसाइट पूरी होने के बाद दूँगा।\nअमित: सही है। मैं वेबसाइट 30 दिनों के अंदर पूरी करके आपको सौंप दूँगा।\nराहुल: अगर किसी कारण से काम समय पर पूरा नहीं हुआ तो?\nअमित: यदि मेरी वजह से देरी होती है, तो मैं हर अतिरिक्त दिन के लिए ₹500 की पेनल्टी स्वीकार करता हूँ।\nराहुल: अच्छा है। वेबसाइट देने के बाद क्या कोई सपोर्ट भी मिलेगा?\nअमित: हाँ, मैं 3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग दूँगा।\nराहुल: अगर मुझे बीच में प्रोजेक्ट रद्द करना पड़े तो?\nअमित: यदि काम शुरू होने के बाद आप प्रोजेक्ट रद्द करते हैं, तो दिया गया एडवांस वापस नहीं किया जाएगा।\nराहुल: और अगर आप काम शुरू ही नहीं करते?\nअमित: ऐसी स्थिति में मैं पूरा एडवांस 7 दिनों के अंदर वापस कर दूँगा।\nराहुल: ठीक है। यह समझौता आज यानी 17 जुलाई 2026 से लागू होगा।\nअमित: और इसकी वैधता तब तक रहेगी जब तक वेबसाइट पूरी होकर अंतिम भुगतान नहीं हो जाता।\nराहुल: हमारी मुलाकात पुणे, महाराष्ट्र में हो रही है, इसलिए यही इस समझौते का स्थान माना जाएगा।\nअमित: ठीक है।\nराहुल: मेरा पूरा नाम राहुल शर्मा है। मेरा मोबाइल नंबर 9876543210 है।\nअमित: मेरा पूरा नाम अमित वर्मा है। मेरा मोबाइल नंबर 9123456780 है।\nराहुल: इस समझौते के गवाह नेहा सिंह और रोहित पाटिल होंगे।\nअमित: दोनों गवाह हमारी उपस्थिति में हस्ताक्षर करेंगे।\nराहुल: क्या हमने सभी शर्तों पर सहमति बना ली है?\nअमित: जी हाँ, मैं अपनी पूरी सहमति देता हूँ।\nराहुल: मैं भी इस समझौते की सभी शर्तें स्वीकार करता हूँ।",
-    "detected_language": "Hindi",
-    "structured_data": {
-      "party_1": "राहुल शर्मा",
-      "party_2": "अमित वर्मा",
-      "agreement_purpose": "ई-कॉमर्स वेबसाइट का निर्माण",
-      "quantity": "1",
-      "unit_price": "Not Specified",
-      "total_amount": "₹50,000",
+      "party_1": "राहुल",
+      "party_2": "अमित",
+      "agreement_purpose": "ई-कॉमर्स वेबसाइट बनाना",
       "payment_amount": "₹50,000",
-      "payment_terms": "₹20,000 एडवांस और बाकी ₹30,000 वेबसाइट पूरी होने के बाद",
+      "payment_terms": "₹20,000 एडवांस और ₹30,000 काम पूरा होने पर",
       "agreement_duration": "30 दिन",
       "responsibilities": {
-        "party_1": [
-          "₹20,000 एडवांस भुगतान करना",
-          "बाकी ₹30,000 का भुगतान वेबसाइट पूरी होने पर करना"
-        ],
-        "party_2": [
-          "30 दिनों के अंदर वेबसाइट पूरी करना",
-          "3 महीने तक मुफ्त तकनीकी सहायता और बग फिक्सिंग प्रदान करना"
-        ]
+        "party_1": [],
+        "party_2": []
       },
       "important_dates": [
-        "17 जुलाई 2026",
-        "7 दिनों के अंदर एडवांस वापसी (यदि काम शुरू नहीं हुआ)"
+        "Not Specified"
       ],
       "witnesses": [
-        "नेहा सिंह",
-        "रोहित पाटिल"
+        "Not Specified"
       ],
       "special_conditions": [
-        "देरी होने पर ₹500 प्रति दिन की पेनल्टी",
-        "काम शुरू होने के बाद प्रोजेक्ट रद्द करने पर एडवांस वापस नहीं होगा",
-        "काम शुरू न होने पर 7 दिनों के अंदर एडवांस वापसी"
+        "Not Specified"
       ],
-      "location": "पुणे, महाराष्ट्र",
-      "delivery_location": "Not Specified",
-      "summary": "राहुल शर्मा और अमित वर्मा के बीच ₹50,000 में एक ई-कॉमर्स वेबसाइट बनाने का समझौता हुआ है, जिसमें 30 दिनों की समय सीमा और तकनीकी सहायता की शर्तें शामिल हैं।"
+      "location": "Not Specified"
     },
-    "missing_fields": [],
-    "agreement": "# AGREEMENT FOR E-COMMERCE WEBSITE DEVELOPMENT\n\nThis Agreement is made and executed on this 17th day of July 2026, at Pune, Maharashtra.\n\n### BETWEEN\n\n**Rahul Sharma** (hereinafter referred to as \"Party 1\")\n\n### AND\n\n**Amit Verma** (hereinafter referred to as \"Party 2\")\n\n---\n\n### 1. RECITALS / PURPOSE\nThe purpose of this Agreement is to define the terms and conditions for the development of an E-commerce website by Party 2 for Party 1.\n\n### 2. TERMS OF PAYMENT\n*   **Total Amount:** ₹50,000\n*   **Payment Terms:** Party 1 shall pay an advance of ₹20,000. The remaining balance of ₹30,000 shall be paid upon the successful completion of the website.\n\n### 3. DURATION & VALIDITY\n*   **Project Duration:** 30 days from the commencement of the agreement.\n*   **Effective Date:** 17 July 2026.\n\n### 4. COVENANTS & RESPONSIBILITIES\n**Responsibilities of Party 1:**\n*   To pay the advance amount of ₹20,000.\n*   To pay the remaining balance of ₹30,000 upon completion of the website.\n\n**Responsibilities of Party 2:**\n*   To complete the website development within 30 days.\n*   To provide free technical support and bug fixing for a period of 3 months.\n\n### 5. SPECIAL CONDITIONS & PENALTIES\n*   **Delay Penalty:** A penalty of ₹500 per day shall be applicable in case of delay in project completion.\n*   **Cancellation Policy:** If the project is cancelled after the work has commenced, the advance payment shall not be refunded.\n*   **Refund Policy:** In the event that the work does not commence, the advance payment shall be refunded within 7 days.\n\n### 6. WITNESSES\n1. Neha Singh\n2. Rohit Patil\n\n---\n\n### SIGNATURES\n\n**Party 1:** __________________________\n(Rahul Sharma)\n\n**Party 2:** __________________________\n(Amit Verma)\n\n**Witness 1:** ________________________\n(Neha Singh)\n\n**Witness 2:** ________________________\n(Rohit Patil)",
+    "missing_fields": [
+      "Location",
+      "Responsibilities",
+      "Important Dates",
+      "Witnesses",
+      "Special Conditions"
+    ],
+    "agreement": "# करारनामा\nभाडेकरार / करारनामा नहीं है, यह एक सेवा करारनामा है जो दो पक्षों के बीच हस्ताक्षरित किया जा रहा है।\n\n## प्रस्तावना\nयह करारनामा दिनांक [Not Specified] को हस्ताक्षरित किया जा रहा है, जिसमें प्रथम पक्ष राहुल और द्वितीय पक्ष अमित हैं।\n\n## पक्ष\n- प्रथम पक्ष: राहुल\n- द्वितीय पक्ष: अमित\n\n## उद्देश्य\nयह करारनामा ई-कॉमर्स वेबसाइट बनाने के उद्देश्य से किया जा रहा है, जिसमें दोनों पक्षों के बीच सेवा प्रदान करने और सेवा ग्रहण करने की शर्तें निर्धारित की जा रही हैं।\n\n## भुगतान की शर्तें\nभुगतान की राशि ₹50,000 है, जिसमें ₹20,000 एडवांस और ₹30,000 काम पूरा होने पर दिया जाएगा।\n\n## अवधि और वैधता\nयह करारनामा 30 दिनों की अवधि के लिए वैध होगा, जो दोनों पक्षों के बीच सहमति से बढ़ाई जा सकती है।\n\n## कर्तव्य और जिम्मेदारियां\n- प्रथम पक्ष की जिम्मेदारियां: [Not Specified]\n- द्वितीय पक्ष की जिम्मेदारियां: [Not Specified]\n\n## विशेष शर्तें और दंड\nविशेष शर्तें और दंड: [Not Specified]\n\n## गवाह\nगवाह: [Not Specified]\n\n## हस्ताक्षर\nयह करारनामा दोनों पक्षों द्वारा हस्ताक्षरित किया जा रहा है, जो इसकी शर्तों को स्वीकार करते हैं और उनका पालन करने के लिए सहमत हैं।\n___________\nप्रथम पक्ष: राहुल\n___________\nद्वितीय पक्ष: अमित\n___________\nगवाह: [Not Specified]",
+    "output_language": "Hindi",
+    "created_at": "2026-07-20T14:28:05.588Z"
+  },
+  "95338133-9846-4ea6-a57d-e2842efb3a39": {
+    "id": "95338133-9846-4ea6-a57d-e2842efb3a39",
+    "transcript": "राहुल नमस्ते अमित जी, ई-कॉमर्स वेबसाइट ₹50,000 में बनेगी। ₹20,000 एडवांस देंगे और बाकी ₹30,000 काम पूरा होने पर देंगे। वेबसाइट 30 दिनों में तैयार होगी।",
+    "detected_language": "Hindi",
+    "structured_data": {
+      "party_1": "राहुल",
+      "party_2": "अमित",
+      "agreement_purpose": "ई-कॉमर्स वेबसाइट बनाना",
+      "payment_amount": "₹50,000",
+      "payment_terms": "₹20,000 एडवांस और ₹30,000 काम पूरा होने पर",
+      "agreement_duration": "30 दिन",
+      "responsibilities": {
+        "party_1": [],
+        "party_2": []
+      },
+      "important_dates": [
+        "Not Specified"
+      ],
+      "witnesses": [
+        "Not Specified"
+      ],
+      "special_conditions": [
+        "Not Specified"
+      ],
+      "location": "Not Specified"
+    },
+    "missing_fields": [
+      "Location",
+      "Responsibilities",
+      "Important Dates",
+      "Witnesses",
+      "Special Conditions"
+    ],
+    "agreement": "# करारनामा\nभाडेकरार / करारनामा नहीं होने के कारण यह करारनामा बनाया जा रहा है।\n\n## प्रस्तावना\nयह करारनामा दिनांक [Not Specified] को निम्नलिखित पक्षों के बीच किया गया है:\n\n## पक्ष\nप्रथम पक्ष: राहुल  \nद्वितीय पक्ष: अमित\n\n## उद्देश्य\nयह करारनामा ई-कॉमर्स वेबसाइट बनाने के उद्देश्य से किया गया है, जिसके लिए दोनों पक्षों ने सहमति व्यक्त की है।\n\n## भुगतान की शर्तें\nभुगतान की राशि ₹50,000 होगी, जिसका भुगतान निम्नलिखित शर्तों पर किया जाएगा:\n- ₹20,000 एडवांस\n- ₹30,000 काम पूरा होने पर\n\n## अवधि और वैधता\nयह करारनामा 30 दिनों की अवधि के लिए वैध होगा।\n\n## कर्तव्य और जिम्मेदारियां\nप्रथम पक्ष और द्वितीय पक्ष की जिम्मेदारियां निम्नलिखित हैं:\nप्रथम पक्ष: [Not Specified]  \nद्वितीय पक्ष: [Not Specified]\n\n## विशेष शर्तें और दंड\nविशेष शर्तें और दंड [Not Specified] हैं।\n\n## गवाह\nगवाह [Not Specified] हैं।\n\n## हस्ताक्षर\nप्रथम पक्ष: _____________________________  \nद्वितीय पक्ष: _____________________________  \nगवाह: _____________________________",
+    "output_language": "Hindi",
+    "created_at": "2026-07-20T14:30:42.387Z"
+  },
+  "d8c4d2b2-7732-453f-b431-42cc97fb2494": {
+    "id": "d8c4d2b2-7732-453f-b431-42cc97fb2494",
+    "transcript": "राहुल नमस्ते अमित जी, ई-कॉमर्स वेबसाइट ₹50,000 में बनेगी। ₹20,000 एडवांस देंगे और बाकी ₹30,000 काम पूरा होने पर देंगे। वेबसाइट 30 दिनों में तैयार होगी।",
+    "detected_language": "Hindi",
+    "structured_data": {
+      "party_1": "राहुल",
+      "party_2": "अमित",
+      "agreement_purpose": "ई-कॉमर्स वेबसाइट बनाना",
+      "payment_amount": "₹50,000",
+      "payment_terms": "₹20,000 एडवांस और ₹30,000 काम पूरा होने पर",
+      "agreement_duration": "30 दिन",
+      "responsibilities": {
+        "party_1": [],
+        "party_2": []
+      },
+      "important_dates": [
+        "Not Specified"
+      ],
+      "witnesses": [
+        "Not Specified"
+      ],
+      "special_conditions": [
+        "Not Specified"
+      ],
+      "location": "Not Specified"
+    },
+    "missing_fields": [
+      "Location",
+      "Responsibilities",
+      "Important Dates",
+      "Witnesses",
+      "Special Conditions"
+    ],
+    "agreement": "# AGREEMENT OF SERVICE\nTHIS AGREEMENT OF SERVICE (\"Agreement\") is made and entered into on the date of execution by and between the parties below.\n\n## Preamble\nThe parties agree to execute this Agreement as of the date of signing, with the terms and conditions outlined below.\n\n## Parties\nThis Agreement is made by and between:\n- **Party 1:** राहुल (Rahul)\n- **Party 2:** अमित (Amit)\n\n## Recitals / Purpose\nWHEREAS, the purpose of this Agreement is for Party 1 and Party 2 to collaborate on the development of an ई-कॉमर्स वेबसाइट (e-commerce website), with the specific terms and conditions as outlined below.\n\n## Terms of Payment\nThe payment terms for this Agreement are as follows:\n- An advance payment of ₹20,000 to be made by Party 2 to Party 1.\n- A final payment of ₹30,000 to be made by Party 2 to Party 1 upon completion of the work.\n\n## Duration & Validity\nThe duration of this Agreement shall be 30 दिन (30 days) from the date of execution.\n\n## Covenants & Responsibilities\nThe responsibilities of the parties are as follows:\n- **Party 1 (राहुल):** Not Specified\n- **Party 2 (अमित):** Not Specified\n\n## Special Conditions & Penalties\nAny special conditions or penalties have been omitted as they are Not Specified.\n\n## Witnesses\nThis Agreement has been witnessed by: Not Specified\n\n## Signatures\nThis Agreement has been executed by the parties as follows:\n\n**Party 1 (राहुल):** _____________________________  \n**Party 2 (अमित):** _____________________________  \n**Witnesses:** Not Applicable",
     "output_language": "English",
-    "created_at": "2026-07-19T15:54:17.299Z"
+    "created_at": "2026-07-20T14:31:20.959Z"
   },
-  "b43c5caa-bac3-436f-b0f4-82e7e0c31682": {
-    "id": "b43c5caa-bac3-436f-b0f4-82e7e0c31682",
-    "transcript": "हा करार १७ जुलै २०२६ रोजी संजय पाटील (मालक) आणि मिलिंद जोशी (भाडेकरू) यांच्यात झाला आहे। संजय पाटील त्यांची कार (क्रमांक MH 12 AB 1234) मिलिंद जोशी यांना ६ महिन्यांसाठी भाड्याने देत आहेत। भाडे दरमहा १०,००० रुपये असेल।",
-    "detected_language": "English",
+  "488a2c3d-1de7-4617-9099-f332b8050a51": {
+    "id": "488a2c3d-1de7-4617-9099-f332b8050a51",
+    "transcript": "सौरभ: नमस्कार प्रिया, आपण घराच्या इंटिरियरच्या कामाबद्दल बोललो होतो ना?\nप्रिया: हो, मला आठवतंय. मी संपूर्ण हॉल आणि किचनचं इंटिरियर करून देईन.\nसौरभ: छान. या कामासाठी एकूण खर्च किती येईल?\nप्रिया: एकूण खर्च ₹२,२५,००० असेल.\nसौरभ: ठीक आहे. मी आज ₹७५,००० अॅडव्हान्स देतो आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर देईन.\nप्रिया: मला मान्य आहे.\nसौरभ: काम पूर्ण करायला किती वेळ लागेल?\nप्रिया: जास्तीत जास्त ४५ दिवसांत काम पूर्ण करून देईन.\nसौरभ: जर उशीर झाला तर?\nप्रिया: जर माझ्याकडून उशीर झाला तर प्रत्येक अतिरिक्त दिवसासाठी ₹१,००० दंड स्वीकारेन.\nसौरभ: आणि काम पूर्ण झाल्यानंतर काही हमी असेल का?\nप्रिया: हो, मी ६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा देईन.\nसौरभ: जर मला काही कारणामुळे काम अर्धवट रद्द करावं लागलं तर?\nप्रिया: काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास दिलेला अॅडव्हान्स परत मिळणार नाही.\nसौरभ: ठीक आहे.\nप्रिया: माझं पूर्ण नाव प्रिया देशमुख आहे आणि माझा मोबाईल नंबर ९८७६५४३२१० आहे.\nसौरभ: माझं पूर्ण नाव सौरभ कुलकर्णी आहे आणि माझा मोबाईल नंबर ९१२३४५६७८९ आहे.\nप्रिया: आपण दोघेही या अटींना पूर्णपणे सहमत आहोत.\nसौरभ: हो, मी या करारातील सर्व अटी मान्य करतो.",
+    "detected_language": "Marathi",
     "structured_data": {
-      "party_1": "First Party",
-      "party_2": "Second Party",
-      "agreement_purpose": "Commercial Agreement",
-      "quantity": "12",
-      "unit_price": "Not Specified",
-      "total_amount": "Not Specified",
-      "payment_amount": "Not Specified",
-      "payment_terms": "Not Specified",
-      "agreement_duration": "Not Specified",
+      "party_1": "सौरभ कुलकर्णी",
+      "party_2": "प्रिया देशमुख",
+      "agreement_purpose": "घराच्या इंटिरियरच्या कामाबद्दल",
+      "payment_amount": "₹२,२५,०००",
+      "payment_terms": "₹७५,००० अॅडव्हान्स आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर",
+      "agreement_duration": "४५ दिवस",
       "responsibilities": {
-        "party_1": [
-          "Make payment as agreed"
-        ],
-        "party_2": [
-          "Fulfill obligations for Commercial Agreement"
-        ]
+        "party_1": [],
+        "party_2": []
       },
       "important_dates": [
         "Not Specified"
@@ -241,40 +255,36 @@
         "Not Specified"
       ],
       "special_conditions": [
-        "Not Specified"
+        "प्रत्येक अतिरिक्त दिवसासाठी ₹१,००० दंड",
+        "६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा",
+        "काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास दिलेला अॅडव्हान्स परत मिळणार नाही"
       ],
-      "location": "Not Specified",
-      "delivery_location": "Not Specified",
-      "summary": "हा करार १७ जुलै २०२६ रोजी संजय पाटील (मालक) आणि मिलिंद जोशी (भाडेकरू) यांच्यात झाला आहे। संजय पाटील त्यांची कार (क्रमांक MH 12 AB 1234) मिलिंद जोशी यांना ६ महिन्यांसाठी भाड्याने देत आहेत। भाडे दरमहा १०,००० रुपये असेल।"
+      "location": "Not Specified"
     },
     "missing_fields": [
-      "Payment Amount"
+      "Location",
+      "Responsibilities",
+      "Important Dates",
+      "Witnesses"
     ],
-    "agreement": "# Commercial Agreement\n\nThis Agreement is entered into between **First Party** and **Second Party**.\n\n### Key Terms\n- **Product / Purpose:** Commercial Agreement\n- **Quantity:** 12\n- **Unit Price:** Not Specified\n- **Total Amount:** Not Specified\n- **Delivery Date:** Not Specified",
-    "output_language": "Hindi",
-    "created_at": "2026-07-19T18:41:17.546Z"
+    "agreement": "# AGREEMENT OF INTERIOR WORK\n## Preamble\nThis Agreement of Interior Work (\"Agreement\") is made and entered into on the date of execution by and between सौरभ कुलकर्णी (\"Party 1\") and प्रिया देशमुख (\"Party 2\").\n\n## Parties\n- **Party 1:** सौरभ कुलकर्णी\n- **Party 2:** प्रिया देशमुख\n\n## Recitals / Purpose\nWHEREAS, Party 1 and Party 2 have agreed to enter into this Agreement for the purpose of घराच्या इंटिरियरच्या कामाबद्दल (interior work of the house); and\nWHEREAS, the parties wish to outline the terms and conditions of their agreement.\n\n## Terms of Payment\nThe total payment for the interior work shall be ₹२,२५,०००. The payment terms are as follows:\n- ₹७५,००० to be paid in advance.\n- The remaining ₹१,५०,००० to be paid upon completion of the work.\n\n## Duration & Validity\nThe duration of this Agreement shall be ४५ दिवस (45 days) from the commencement of the work.\n\n## Covenants & Responsibilities\nThe responsibilities of the parties are as follows:\n- **Party 1:** [Not Specified]\n- **Party 2:** [Not Specified]\n\n## Special Conditions & Penalties\nThe following special conditions and penalties shall apply:\n- A penalty of ₹१,००० for each additional day beyond the agreed duration.\n- A ६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा (6 months of free service and minor repair facility) shall be provided.\n- If the project is cancelled after the work commences, the advance payment made shall not be refundable.\n\n## Witnesses\n[Not Specified]\n\n## Signatures\nThis Agreement has been executed by the parties as of the date first above written.\n\n**Party 1 (सौरभ कुलकर्णी):** _____________________________  \n**Party 2 (प्रिया देशमुख):** _____________________________  \n**Witnesses:** [Not Specified]",
+    "output_language": "English",
+    "created_at": "2026-07-20T14:33:35.666Z"
   },
-  "186c3918-a48f-482b-8a81-40c37f639e03": {
-    "id": "186c3918-a48f-482b-8a81-40c37f639e03",
-    "transcript": "हा करार १७ जुलै २०२६ रोजी संजय पाटील (मालक) आणि मिलिंद जोशी (भाडेकरू) यांच्यात झाला आहे। संजय पाटील त्यांची कार (क्रमांक MH 12 AB 1234) मिलिंद जोशी यांना ६ महिन्यांसाठी भाड्याने देत आहेत। भाडे दरमहा १०,००० रुपये असेल।",
-    "detected_language": "English",
+  "8fa06bb6-8c50-4fb9-8e40-94aa9a043618": {
+    "id": "8fa06bb6-8c50-4fb9-8e40-94aa9a043618",
+    "transcript": "सौरभ कुलकर्णी (मालक) आणि प्रिया देशमुख (भाडेकरू) यांच्यात घराच्या इंटीरियरच्या कामाबद्दल २५,००० रुपये ॲडव्हान्स आणि उरलेले १,५०,००० काम पूर्ण झाल्यावर ४५ दिवसांत पूर्ण करण्याचे ठरले.",
+    "detected_language": "Marathi",
     "structured_data": {
-      "party_1": "First Party",
-      "party_2": "Second Party",
-      "agreement_purpose": "Commercial Agreement",
-      "quantity": "12",
-      "unit_price": "Not Specified",
-      "total_amount": "Not Specified",
-      "payment_amount": "Not Specified",
-      "payment_terms": "Not Specified",
-      "agreement_duration": "Not Specified",
+      "party_1": "सौरभ कुलकर्णी",
+      "party_2": "प्रिया देशमुख",
+      "agreement_purpose": "घराच्या इंटीरियरच्या कामाबद्दल",
+      "payment_amount": "1,75,000 रुपये",
+      "payment_terms": "२५,००० रुपये ॲडव्हान्स आणि उरलेले १,५०,००० काम पूर्ण झाल्यावर",
+      "agreement_duration": "४५ दिवस",
       "responsibilities": {
-        "party_1": [
-          "Make payment as agreed"
-        ],
-        "party_2": [
-          "Fulfill obligations for Commercial Agreement"
-        ]
+        "party_1": [],
+        "party_2": []
       },
       "important_dates": [
         "Not Specified"
@@ -285,38 +295,33 @@
       "special_conditions": [
         "Not Specified"
       ],
-      "location": "Not Specified",
-      "delivery_location": "Not Specified",
-      "summary": "हा करार १७ जुलै २०२६ रोजी संजय पाटील (मालक) आणि मिलिंद जोशी (भाडेकरू) यांच्यात झाला आहे। संजय पाटील त्यांची कार (क्रमांक MH 12 AB 1234) मिलिंद जोशी यांना ६ महिन्यांसाठी भाड्याने देत आहेत। भाडे दरमहा १०,००० रुपये असेल।"
+      "location": "Not Specified"
     },
     "missing_fields": [
-      "Payment Amount"
+      "Location",
+      "Responsibilities",
+      "Important Dates",
+      "Witnesses",
+      "Special Conditions"
     ],
-    "agreement": "# Commercial Agreement\n\nThis Agreement is entered into between **First Party** and **Second Party**.\n\n### Key Terms\n- **Product / Purpose:** Commercial Agreement\n- **Quantity:** 12\n- **Unit Price:** Not Specified\n- **Total Amount:** Not Specified\n- **Delivery Date:** Not Specified",
-    "output_language": "Hindi",
-    "created_at": "2026-07-19T18:41:46.470Z"
+    "agreement": "# AGREEMENT OF HOUSE INTERIOR WORK\n## Preamble\nThis Agreement of House Interior Work (\"Agreement\") is made and entered into on [Not Specified] (\"Effective Date\") by and between Saurabh Kulkarni (\"Party 1\") and Priya Deshmukh (\"Party 2\").\n\n## Parties\nParty 1: Saurabh Kulkarni  \nParty 2: Priya Deshmukh\n\n## Recitals / Purpose\nWHEREAS, Party 1 and Party 2 have agreed to enter into this Agreement for the purpose of House Interior Work; and  \nWHEREAS, the parties wish to outline the terms and conditions of their agreement.\n\n## Terms of Payment\nThe payment amount for the House Interior Work shall be 1,75,000 Rupees. The payment terms are as follows: 25,000 Rupees advance and the remaining 1,50,000 Rupees upon completion of the work.\n\n## Duration & Validity\nThe duration of this Agreement shall be 45 days.\n\n## Covenants & Responsibilities\nThe responsibilities of the parties are as follows:  \nParty 1: [Not Specified]  \nParty 2: [Not Specified]\n\n## Special Conditions & Penalties\n[Not Specified]\n\n## Witnesses\n[Not Specified]\n\n## Signatures\n___________  \nSaurabh Kulkarni (Party 1)  \n___________  \nPriya Deshmukh (Party 2)  \n___________  \nWitness 1: [Not Specified]  \n___________  \nWitness 2: [Not Specified]",
+    "output_language": "English",
+    "created_at": "2026-07-20T14:36:53.466Z"
   },
-  "edd42062-8f6a-4680-b0f9-24c23100a5e1": {
-    "id": "edd42062-8f6a-4680-b0f9-24c23100a5e1",
-    "transcript": "बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित। एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रॉडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो। कुल लागत ₹50000 होगी। अमित मैं ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा।",
-    "detected_language": "English",
+  "02a6a1e6-20ce-4aa7-a0f3-ccddb60e58b7": {
+    "id": "02a6a1e6-20ce-4aa7-a0f3-ccddb60e58b7",
+    "transcript": "सौरभ: नमस्कार प्रिया, आपण घराच्या इंटिरियरच्या कामाबद्दल बोललो होतो ना?\nप्रिया: हो, मला आठवतंय. मी संपूर्ण हॉल आणि किचनचं इंटिरियर करून देईन.\nसौरभ: छान. या कामासाठी एकूण खर्च किती येईल?\nप्रिया: एकूण खर्च ₹२,२५,००० असेल.\nसौरभ: ठीक आहे. मी आज ₹७५,००० अॅडव्हान्स देतो आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर देईन.\nप्रिया: मला मान्य आहे.\nसौरभ: काम पूर्ण करायला किती वेळ लागेल?\nप्रिया: जास्तीत जास्त ४५ दिवसांत काम पूर्ण करून देईन.\nसौरभ: जर उशीर झाला तर?\nप्रिया: जर माझ्याकडून उशीर झाला तर प्रत्येक अतिरिक्त दिवसासाठी ₹१,००० दंड स्वीकारेन.\nसौरभ: आणि काम पूर्ण झाल्यानंतर काही हमी असेल का?\nप्रिया: हो, मी ६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा देईन.\nसौरभ: जर मला काही कारणामुळे काम अर्धवट रद्द करावं लागलं तर?\nप्रिया: काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास दिलेला अॅडव्हान्स परत मिळणार नाही.\nसौरभ: ठीक आहे.\nप्रिया: माझं पूर्ण नाव प्रिया देशमुख आहे आणि माझा मोबाईल नंबर ९८७६५४३२१० आहे.\nसौरभ: माझं पूर्ण नाव सौरभ कुलकर्णी आहे आणि माझा मोबाईल नंबर ९१२३४५६७८९ आहे.\nप्रिया: आपण दोघेही या अटींना पूर्णपणे सहमत आहोत.\nसौरभ: हो, मी या करारातील सर्व अटी मान्य करतो.",
+    "detected_language": "Marathi",
     "structured_data": {
-      "party_1": "First Party",
-      "party_2": "Second Party",
-      "agreement_purpose": "Commercial Agreement",
-      "quantity": "50000",
-      "unit_price": "₹50000",
-      "total_amount": "₹50000",
-      "payment_amount": "INR 50000",
-      "payment_terms": "Not Specified",
-      "agreement_duration": "Not Specified",
+      "party_1": "सौरभ कुलकर्णी",
+      "party_2": "प्रिया देशमुख",
+      "agreement_purpose": "घराच्या इंटिरियरच्या कामाबद्दल",
+      "payment_amount": "₹२,२५,०००",
+      "payment_terms": "₹७५,००० अॅडव्हान्स आणि उरलेले ₹१,५०,००० काम पूर्ण झाल्यावर",
+      "agreement_duration": "४५ दिवस",
       "responsibilities": {
-        "party_1": [
-          "Make payment as agreed"
-        ],
-        "party_2": [
-          "Fulfill obligations for Commercial Agreement"
-        ]
+        "party_1": [],
+        "party_2": []
       },
       "important_dates": [
         "Not Specified"
@@ -325,95 +330,20 @@
         "Not Specified"
       ],
       "special_conditions": [
-        "Not Specified"
+        "प्रत्येक अतिरिक्त दिवसासाठी ₹१,००० दंड",
+        "६ महिन्यांची मोफत सर्व्हिस आणि किरकोळ दुरुस्तीची सुविधा",
+        "काम सुरू झाल्यानंतर प्रकल्प रद्द केल्यास दिलेला अॅडव्हान्स परत मिळणार नाही"
       ],
-      "location": "Not Specified",
-      "delivery_location": "Not Specified",
-      "summary": "बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित। एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रॉडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो। कुल लागत ₹50000 होगी। अमित मैं ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा।"
+      "location": "Not Specified"
     },
-    "missing_fields": [],
-    "agreement": "# Commercial Agreement\n\nThis Agreement is entered into between **First Party** and **Second Party**.\n\n### Key Terms\n- **Product / Purpose:** Commercial Agreement\n- **Quantity:** 50000\n- **Unit Price:** ₹50000\n- **Total Amount:** ₹50000\n- **Delivery Date:** Not Specified",
-    "output_language": "Hindi",
-    "created_at": "2026-07-19T18:42:27.264Z"
-  },
-  "56fa747b-dcdc-4ad9-b027-61ce962be1fc": {
-    "id": "56fa747b-dcdc-4ad9-b027-61ce962be1fc",
-    "transcript": "बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित। एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रॉडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो। कुल लागत ₹50000 होगी। अमित मैं ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा।",
-    "detected_language": "English",
-    "structured_data": {
-      "party_1": "First Party",
-      "party_2": "Second Party",
-      "agreement_purpose": "Commercial Agreement",
-      "quantity": "50000",
-      "unit_price": "₹50000",
-      "total_amount": "₹50000",
-      "payment_amount": "INR 50000",
-      "payment_terms": "Not Specified",
-      "agreement_duration": "Not Specified",
-      "responsibilities": {
-        "party_1": [
-          "Make payment as agreed"
-        ],
-        "party_2": [
-          "Fulfill obligations for Commercial Agreement"
-        ]
-      },
-      "important_dates": [
-        "Not Specified"
-      ],
-      "witnesses": [
-        "Not Specified"
-      ],
-      "special_conditions": [
-        "Not Specified"
-      ],
-      "location": "Not Specified",
-      "delivery_location": "Not Specified",
-      "summary": "बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित। एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रॉडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो। कुल लागत ₹50000 होगी। अमित मैं ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा।"
-    },
-    "missing_fields": [],
-    "agreement": "# Commercial Agreement\n\nThis Agreement is entered into between **First Party** and **Second Party**.\n\n### Key Terms\n- **Product / Purpose:** Commercial Agreement\n- **Quantity:** 50000\n- **Unit Price:** ₹50000\n- **Total Amount:** ₹50000\n- **Delivery Date:** Not Specified",
-    "output_language": "Hindi",
-    "created_at": "2026-07-19T18:42:54.947Z"
-  },
-  "98f707c2-f9d7-4518-97ad-cb1ab55dfe91": {
-    "id": "98f707c2-f9d7-4518-97ad-cb1ab55dfe91",
-    "transcript": "बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित। एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रॉडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो। कुल लागत ₹50000 होगी। अमित मैं ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा।",
-    "detected_language": "English",
-    "structured_data": {
-      "party_1": "अमित",
-      "party_2": "Second Party",
-      "agreement_purpose": "ई-कॉमर्स वेबसाइट विकास (Website Development)",
-      "quantity": "1",
-      "unit_price": "₹50000",
-      "total_amount": "₹50000",
-      "payment_amount": "INR 50000",
-      "payment_terms": "₹20000 Advance, Balance on Completion",
-      "agreement_duration": "Not Specified",
-      "responsibilities": {
-        "party_1": [
-          "Make payment as agreed"
-        ],
-        "party_2": [
-          "Fulfill obligations for ई-कॉमर्स वेबसाइट विकास (Website Development)"
-        ]
-      },
-      "important_dates": [
-        "Not Specified"
-      ],
-      "witnesses": [
-        "Not Specified"
-      ],
-      "special_conditions": [
-        "Not Specified"
-      ],
-      "location": "Not Specified",
-      "delivery_location": "Not Specified",
-      "summary": "बात की थी मैं अपनी वेबसाइट बनवाना चाहता हूं अमित। एक ई कॉमर्स वेबसाइट चाहिए जिसमें ऑनलाइन पेमेंट प्रॉडक्ट लिस्टिंग और ऑर्डर ट्रैकिंग की सुविधा हो। कुल लागत ₹50000 होगी। अमित मैं ₹20000 एडवांस दे देता हूं और बाकी ₹30000 वेबसाइट पूरी होने के बाद दूंगा।"
-    },
-    "missing_fields": [],
-    "agreement": "# Commercial Agreement\n\nThis Agreement is entered into between **अमित** and **Second Party**.\n\n### Key Terms\n- **Product / Purpose:** ई-कॉमर्स वेबसाइट विकास (Website Development)\n- **Quantity:** 1\n- **Unit Price:** ₹50000\n- **Total Amount:** ₹50000\n- **Delivery Date:** Not Specified",
-    "output_language": "Hindi",
-    "created_at": "2026-07-19T18:44:25.104Z"
+    "missing_fields": [
+      "Location",
+      "Responsibilities",
+      "Important Dates",
+      "Witnesses"
+    ],
+    "agreement": "# AGREEMENT OF HOUSE INTERIOR WORK\n## Preamble\nThis Agreement of House Interior Work is made and entered into on the date of execution by and between the parties whose details are specified below.\n\n## Parties\n- **Party 1:** Saurabh Kulkarni\n- **Party 2:** Priya Deshmukh\n\n## Recitals / Purpose\nThis Agreement is made with the purpose of outlining the terms and conditions for the house interior work to be undertaken by Party 1 for Party 2.\n\n## Terms of Payment\nThe total payment for the house interior work shall be ₹2,25,000. The payment terms are as follows: ₹75,000 as an advance and the remaining ₹1,50,000 to be paid upon completion of the work.\n\n## Duration & Validity\nThe duration of this Agreement shall be 45 days from the commencement of the work.\n\n## Covenants & Responsibilities\n- **Party 1 Responsibilities:** Not Specified\n- **Party 2 Responsibilities:** Not Specified\n\n## Special Conditions & Penalties\nThe following special conditions and penalties shall apply:\n- A penalty of ₹1,000 for each additional day beyond the agreed duration.\n- A 6-month free service and minor repair facility.\n- In the event the project is cancelled after commencement, the advance paid shall not be refundable.\n\n## Witnesses\nNot Specified\n\n## Signatures\n### Party 1 (Saurabh Kulkarni)\n___________________________\n### Party 2 (Priya Deshmukh)\n___________________________\n### Witnesses\n___________________________",
+    "output_language": "English",
+    "created_at": "2026-07-20T14:38:09.303Z"
   }
 }

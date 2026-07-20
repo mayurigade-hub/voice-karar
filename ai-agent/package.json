@@ -5,17 +5,18 @@
   "main": "src/server.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc --noEmit",
     "dev": "tsx watch src/server.ts",
     "start": "tsx src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.1.1",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2"
   }

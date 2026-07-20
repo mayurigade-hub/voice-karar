@@ -19,26 +19,21 @@ Ensure your output is ONLY the JSON object, with no other text, markdown formatt
 
 export const EXTRACTION_PROMPT = `
 You are a highly precise legal information extraction agent. Your job is to extract structured agreement parameters from the provided transcript.
-You must extract the following 16 fields:
+You must extract the following 11 fields:
 1. party_1 (Full name/identity of Party 1 or "Not Specified")
 2. party_2 (Full name/identity of Party 2 or "Not Specified")
 3. agreement_purpose (Goal or purpose of the agreement, e.g. renting a shop, selling a vehicle, or "Not Specified")
-4. quantity (Quantity of goods/services purchased or ordered, e.g. 500, or "Not Specified")
-5. unit_price (Unit price of the goods/services, e.g. ₹350, or "Not Specified")
-6. total_amount (Total amount/price of the transaction, e.g. ₹175,000, or "Not Specified")
-7. payment_amount (Total money to be paid, including currency, or "Not Specified")
-8. payment_terms (How payment is to be made, installment details, security deposits, or "Not Specified")
-9. agreement_duration (Start date, end date, total months/years, or "Not Specified")
-10. responsibilities (A JSON object with:
+4. payment_amount (Total money to be paid, including currency, or "Not Specified")
+5. payment_terms (How payment is to be made, installment details, security deposits, or "Not Specified")
+6. agreement_duration (Start date, end date, total months/years, or "Not Specified")
+7. responsibilities (A JSON object with:
    - party_1: list of responsibilities of Party 1 as string array.
    - party_2: list of responsibilities of Party 2 as string array.
    If no specific responsibilities are stated, keep the arrays empty.)
-11. important_dates (List of key dates like payment deadlines, registration, or "Not Specified" as string array)
-12. witnesses (List of witness names or "Not Specified" as string array)
-13. special_conditions (Overage fees, breach penalties, terminations, or "Not Specified" as string array)
-14. location (City, state, or address where the agreement is executed/takes place, or "Not Specified")
-15. delivery_location (Address or warehouse location where goods should be delivered, or "Not Specified")
-16. summary (A brief, professional, AI-generated one-to-two sentence summary of the deal, e.g. "The AI identified an agreement where...", or "Not Specified")
+8. important_dates (List of key dates like payment deadlines, registration, or "Not Specified" as string array)
+9. witnesses (List of witness names or "Not Specified" as string array)
+10. special_conditions (Overage fees, breach penalties, terminations, or "Not Specified" as string array)
+11. location (City, state, or address where the agreement is executed/takes place, or "Not Specified")
 
 CRITICAL INSTRUCTIONS:
 - You must strictly use facts present in the transcript.
@@ -51,9 +46,6 @@ JSON output format:
   "party_1": "...",
   "party_2": "...",
   "agreement_purpose": "...",
-  "quantity": "...",
-  "unit_price": "...",
-  "total_amount": "...",
   "payment_amount": "...",
   "payment_terms": "...",
   "agreement_duration": "...",
@@ -64,10 +56,9 @@ JSON output format:
   "important_dates": ["..."],
   "witnesses": ["..."],
   "special_conditions": ["..."],
-  "location": "...",
-  "delivery_location": "...",
-  "summary": "..."
+  "location": "..."
 }
+
 Ensure your output is ONLY the JSON object, with no other text, markdown formatting, or surrounding characters. Do not wrap in markdown block backticks.
 `;
 
@@ -91,9 +82,10 @@ Agreement Structure:
 10. Signatures (Placeholder text for Party 1, Party 2, and Witnesses to sign)
 
 CRITICAL RULES:
-- Write the entire agreement in {output_language}.
-- Translate name spellings, amounts, and dates phonetically or keep them intact (using appropriate Devanagari script for Hindi/Marathi, or Latin script for English) to ensure they are legally accurate.
-- If a field in the JSON is "Not Specified", DO NOT invent a clause for it. You can either write "Not Specified" or "[Not Specified]" or state that this clause has been omitted, but never generate fabricated names, addresses, amounts, or clauses.
+- Write the entire agreement 100% in {output_language} script and language.
+- Convert/transliterate ALL field values, names, agreement purposes, terms, and responsibilities into {output_language} (e.g., if {output_language} is English, transliterate Devanagari names like 'सौरभ कुलकर्णी' to 'Saurabh Kulkarni', 'प्रिया देशमुख' to 'Priya Deshmukh', and translate phrases like 'घराच्या इंटीरियरच्या कामाबद्दल' to 'House Interior Work').
+- Do NOT mix scripts or leave non-{output_language} words in the generated document.
+- If a field in the JSON is "Not Specified", DO NOT invent a clause for it. Write "Not Specified" or "[Not Specified]". Never generate fabricated names, addresses, amounts, or clauses.
 - Do NOT translate directly from the original transcript; only use the structured JSON data as the source of facts.
 - Output the document in clean, readable Markdown format. Do not write any preamble, explanation, or notes. Output ONLY the drafted agreement.
 `;

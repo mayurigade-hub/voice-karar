@@ -1365,7 +1365,7 @@
         
         const missingFields = result.missing_fields || [];
         if (missingFields.length > 0) {
-          setStepStatus(stepValidate, validateStatus, "completed", `Incomplete`);
+          setStepStatus(stepValidate, validateStatus, "completed", "Omissions Flagged");
           resValidationBadge.textContent = "Omissions Flagged";
           resValidationBadge.className = "badge badge-warning";
           

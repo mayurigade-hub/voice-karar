@@ -7,9 +7,6 @@ export interface AgreementStructuredData {
   party_1: string;
   party_2: string;
   agreement_purpose: string;
-  quantity?: string;
-  unit_price?: string;
-  total_amount?: string;
   payment_amount: string;
   payment_terms: string;
   agreement_duration: string;
@@ -18,8 +15,6 @@ export interface AgreementStructuredData {
   witnesses: string[];
   special_conditions: string[];
   location: string;
-  delivery_location?: string;
-  summary?: string;
 }
 
 export interface GenerateAgreementRequest {
